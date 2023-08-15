@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact us</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230815212655" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230815212655">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid">
+					<a href="" class="header__logo navbar-brand"><img src="img/logo.svg" alt="logo"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-burger">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a href="" class="nav-link" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">Browse Properties</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">Buying in Malta</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">The Team</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">About Us</a>
+							</li>
+						</ul>
+						<a href="" class="btn btn-primary header-button">Contact</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="page">
+
+			<!-- SECTION top-section -->
+			<section class="top-section">
+				<div class="top-section__container">
+					<div class="jumbotron jumbotron-fluid">
+						<div class="top-section__title">
+							Contact us
+						</div>
+						<div class="top-section__text">
+							We’re a team of experts with a combines 50 years experience
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End of SECTION top-section -->
+
+
+
+
+			<!-- SECTION article -->
+			<section class="section-bottom">
+				<div class="section-bottom__container">
+					<div class="article__row article__row-white article__row_img-left">
+						<div class="article__content">
+							<div class="article__title">Why us?</div>
+							<div class="article__text">
+								<p>Buying or selling a property with us can provide several benefits, including access to
+									exclusive listings, market expertise, professional guidance, marketing & advertising,
+									networking, legal & administrative support, and peace of mind. </p>
+
+								<p>Our access to Exclusive Listings provides access to exclusive listings that aren’t already
+									available to the general public. This means that you can get access to properties that are
+									not advertised on property portals or other websites. </p>
+							</div>
+						</div>
+						<div class="article__image">
+							<img src="img/image-4.jpg" alt="image">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End of SECTION article -->
+
+
+
+			<!-- SECTION contact-form -->
+			<section class="contact-form bg-grey">
+				<div class="contact-form__container">
+					<form action="files/sendmail/sendmail.php" method="POST">
+						<div class="row">
+							<div class="col-lg-6 col-12">
+								<div class="row">
+									<div class="col-12">
+										<input type="text" name="form[name]" data-error="Error" placeholder="* Your name" class="input">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<input type="text" name="form[email]" data-error="Error" placeholder="* Your e-Mail" class="input">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-3">
+										<input type="text" name="form[email]" data-error="Error" placeholder="Prefix" class="input">
+									</div>
+									<div class="col-9">
+										<input type="text" name="form[email]" data-error="Error" placeholder="Your phone" class="input">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<input type="text" name="form[email]" data-error="Error" placeholder="Property ID" class="input">
+									</div>
+								</div>
+								<div class="row checkbox-pc">
+									<div class="col-12">
+										<div class="checkbox">
+											<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label"><span class="checkbox__text">I consent to having this website store my submitted information so they can respond to my inquiry.</span></label>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="col-lg-6 col-12">
+								<div class="row row-textarea">
+									<div class="col-12">
+										<textarea name="" id="" cols="30" rows="10" placeholder="* Your message">
+
+										</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row checkbox-mobile">
+							<div class="col-12">
+								<div class="checkbox">
+									<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">I consent to having this website store my submitted information so they can respond to my inquiry.</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<button type="submit" class="button">Send</button>
+							</div>
+						</div>
+
+
+					</form>
+				</div>
+			</section>
+			<!-- End of SECTION contact-form -->
+
+
+
+
+		</main>
+		<footer class="footer text-white">
+			<div class="footer__container">
+				<div class="container-fluid">
+					<div class="row row-top">
+						<div class="footer__col col-lg-9">
+							<div class="col">
+								<img src="img/logo-footer.svg" alt="Logo" class="footer-logo">
+								<div class="footer__text">Find your new home in Malta with MaltaSaleProperty.com</div>
+								<div class="footer__mail">
+									<img src="img/icons/icon-mail.svg" alt="mail">
+									<a href="mailto:malta@maltasalesproperty.com">malta@maltasalesproperty.com</a>
+								</div>
+								<div class="footer__phone">
+									<img src="img/icons/icon-phone.svg" alt="phone">
+									<a href="tel:+35612345678">+356 12345678</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row row-top row-top-links">
+						<div class="footer__col">
+							<div class="footer__title">Our Service</div>
+							<ul class="list-unstyled">
+								<li><a href="">Buying Property in Malta</a></li>
+								<li><a href="">Legal Process</a></li>
+								<li><a href="">Browse Properties</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__col">
+							<div class="footer__title"></div>
+							<ul class="list-unstyled">
+								<li><a href="">About Us</a></li>
+								<li><a href="">About Malta</a></li>
+								<li><a href="">Contact Us</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__col">
+							<div class="footer__title">Social Media</div>
+							<ul class="list-unstyled">
+								<li><a href="">YouTube</a></li>
+								<li><a href="">Instagram</a></li>
+								<li><a href="">Twitter</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="row footer-row-bottom">
+				<div>Copyright MaltaSaleProperty.com 2023 <span>All Right Reserved</span></div>
+			</div>
+		</footer>
+	</div>
+	<!-- Bootstrap and jQuery scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230815212655" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230815212655"></script>
+</body>
+
+</html>

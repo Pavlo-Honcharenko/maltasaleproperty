@@ -1,0 +1,20 @@
+<svg id="Icon_Time" data-name="Icon Time" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="_22_Background_Mask_" data-name="22 (Background/Mask)" width="24" height="24" fill="#97d2ff"/>
+    </clipPath>
+  </defs>
+  <circle id="Ellipse_118" data-name="Ellipse 118" cx="24" cy="24" r="24" fill="#97d2ff"/>
+  <g id="_22" data-name="22" transform="translate(12 12)">
+    <rect id="_22_Background_Mask_2" data-name="22 (Background/Mask)" width="24" height="24" fill="#97d2ff"/>
+    <g id="_22-2" data-name="22" clip-path="url(#clip-path)">
+      <g id="Group_1689" data-name="Group 1689" transform="translate(3 3)">
+        <g id="Ellipse_2" data-name="Ellipse 2" fill="#fff" stroke="#5fafec" stroke-width="1.2" stroke-dasharray="0 0">
+          <circle cx="9" cy="9" r="9" stroke="none"/>
+          <circle cx="9" cy="9" r="8.4" fill="none"/>
+        </g>
+        <path id="Vector" d="M0,0V4.639L3,6" transform="translate(9 5)" fill="#fff" stroke="#5fafec" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.2" stroke-dasharray="0 0"/>
+      </g>
+    </g>
+  </g>
+</svg>
