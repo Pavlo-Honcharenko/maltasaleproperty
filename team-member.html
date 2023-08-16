@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230816110044" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230816110044">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230816170137" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230816170137">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -257,6 +257,104 @@
 
 
 
+			<!-- SECTION contact-buttons -->
+			<section class="contact-buttons">
+				<div class="contact-buttons__container">
+					<div class="contact-buttons__wrapper">
+						<!-- Button to trigger the modal -->
+						<a href="#" class="contact-form-button" data-bs-toggle="modal" data-bs-target="#contactFormModal">Contact Form</a>
+
+						<a href="https://wa.me/PHONE_NUMBER" class="whatsapp-button" target="_blank">WhatsApp</a>
+					</div>
+				</div>
+			</section>
+			<!-- End of SECTION contact-buttons -->
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						<div class="modal-body">
+							<div class="contact-form bg-grey">
+								<div class="contact-form__container">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									<form action="" method="POST">
+										<div class="row">
+											<div class="col-lg-6 col-12">
+												<div class="row">
+													<div class="col-12">
+														<input type="text" name="form[name]" data-error="Error" placeholder="* Your name" class="input">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12">
+														<input type="text" name="form[email]" data-error="Error" placeholder="* Your e-Mail" class="input">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-3">
+														<input type="text" name="form[email]" data-error="Error" placeholder="Prefix" class="input">
+													</div>
+													<div class="col-9">
+														<input type="text" name="form[email]" data-error="Error" placeholder="Your phone" class="input">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12">
+														<input type="text" name="form[email]" data-error="Error" placeholder="Property ID" class="input">
+													</div>
+												</div>
+												<div class="row checkbox-pc">
+													<div class="col-12">
+														<div class="checkbox">
+															<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">I
+																	consent to having this website store my submitted information so they
+																	can respond to my inquiry.</span></label>
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+											<div class="col-lg-6 col-12">
+												<div class="row row-textarea">
+													<div class="col-12">
+														<textarea name="" id="" cols="30" rows="10" placeholder="* Your message">
+
+														</textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row checkbox-mobile">
+											<div class="col-12">
+												<div class="checkbox">
+													<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="c_1" class="checkbox__label"><span class="checkbox__text">I consent
+															to having this website store my submitted information so they can respond
+															to my inquiry.</span></label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<button type="submit" class="button">Send</button>
+											</div>
+										</div>
+
+
+									</form>
+								</div>
+								</в>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 		</main>
 		<footer class="footer text-white">
 			<div class="footer__container">
@@ -316,8 +414,8 @@
 		</footer>
 	</div>
 	<!-- Bootstrap and jQuery scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230816110044" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230816110044"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230816170137" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20230816170137"></script>
 </body>
 
 </html>

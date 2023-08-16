@@ -212,7 +212,7 @@ h6 {
   color: #FFF;
   font-size: 18px;
   font-weight: 500;
-  padding: 20px 28px;
+  padding: 16px 28px 17px;
   border-radius: 8px;
 }
 
@@ -1194,7 +1194,7 @@ footer a:hover {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  padding: 20px 40px;
+  padding: 13px 40px 14px;
   border-radius: 8px;
   margin-top: 30px;
 }
@@ -1329,6 +1329,96 @@ a {
 .pagination .page-item.active .page-link:hover {
   color: #FFF;
   background-color: #5FAFEC;
+}
+
+.contact-buttons {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  /* Adjust as needed */
+  bottom: 30px;
+  width: 100%;
+}
+
+.contact-buttons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.contact-buttons__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-form-button,
+.whatsapp-button {
+  /* Style for "WhatsApp" */
+  width: 260px;
+  height: 48px;
+  color: #f0ffdb;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background-color: #143a3a;
+  /* Adjust as needed */
+  text-decoration: none;
+  /* Remove underline */
+  margin-top: 20px;
+}
+
+.contact-form-button {
+  background-color: #5FAFEC;
+}
+
+.whatsapp-button {
+  background-image: url("../img/icons/icon-whatsapp.svg");
+  /* Background image */
+  background-position: 11px center;
+  /* Positioning */
+  background-repeat: no-repeat;
+  /* Prevent tiling */
+}
+
+.contact-form__container .btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-dialog {
+  max-width: 1200px;
+  position: relative;
+  padding: 0 10px;
 }
 
 @media (min-width: 61.99875em) {
