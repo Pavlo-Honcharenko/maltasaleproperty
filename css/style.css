@@ -1205,6 +1205,37 @@ footer a:hover {
   display: none;
 }
 
+a {
+  cursor: pointer;
+}
+
+.team .object {
+  background-color: #F4F7FF;
+}
+
+.team .object__button {
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 11px 22px 12px;
+}
+
+.team__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.object__quote {
+  margin-top: 18px;
+  margin-bottom: auto;
+  color: #143a3a;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 @media (min-width: 61.99875em) {
   .header .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end;
@@ -1332,6 +1363,15 @@ footer a:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 650px;
             flex: 0 1 650px;
+  }
+}
+
+@media (max-width: 75em) {
+  .object {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    max-width: 750px;
   }
 }
 
@@ -1556,6 +1596,11 @@ footer a:hover {
     margin-top: 30px;
   }
 
+  .object__button {
+    padding: 12px 16px 13px;
+    margin-top: 30px;
+  }
+
   .step-by-step__text p {
     margin-bottom: 40px;
   }
@@ -1591,6 +1636,63 @@ footer a:hover {
 
   .contact-form__container .button {
     padding: 13px 30px 14px;
+  }
+}
+
+@media (max-width: 36.25em) {
+  .object {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .object__image {
+    margin: 0 auto 30px;
+    width: 100%;
+    min-width: 290px;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .object__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .team .object__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .object__quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
   }
 }
 
