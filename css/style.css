@@ -447,14 +447,18 @@ footer a:hover {
 
 .main-carousel {
   width: 100%;
-  max-width: 1512px;
   margin: 0 auto;
 }
 
 .main-carousel .img-fluid {
-  min-height: 250px;
+  min-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+}
+
+.main-carousel .slider-content {
+  width: 100%;
 }
 
 .main-carousel .slider-content--wrapper {
