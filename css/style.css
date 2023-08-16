@@ -1240,6 +1240,97 @@ a {
   font-weight: 500;
 }
 
+.full-banner {
+  width: 100%;
+}
+
+.full-banner img {
+  width: 100%;
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-member__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.team-member__title {
+  color: #143A3A;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 100%;
+}
+
+.team-member__text {
+  color: #143A3A;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.pagination-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination {
+  padding-left: initial;
+}
+
+.page-item {
+  padding: 0 8px;
+}
+
+.pagination .page-link {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #77838F;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: drop-shadow(0px 2px 48px rgba(0, 0, 0, 0.04));
+          filter: drop-shadow(0px 2px 48px rgba(0, 0, 0, 0.04));
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #5FAFEC;
+  color: #FFF;
+}
+
+/* Optional: Remove Bootstrap's default hover/focus styles */
+
+.pagination .page-link:focus,
+.pagination .page-link:hover {
+  color: #77838F;
+  background-color: #fff;
+}
+
+.pagination .page-item.active .page-link:focus,
+.pagination .page-item.active .page-link:hover {
+  color: #FFF;
+  background-color: #5FAFEC;
+}
+
 @media (min-width: 61.99875em) {
   .header .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end;
@@ -1359,6 +1450,10 @@ a {
 
   .buyers-scheme__subtitle {
     font-size: 2rem;
+  }
+
+  .team-member__title {
+    font-size: 4.0625rem;
   }
 }
 
@@ -1490,6 +1585,10 @@ a {
 
   .buyers-scheme__subtitle {
     font-size: 1.75rem;
+  }
+
+  .team-member__title {
+    font-size: 2.625rem;
   }
 }
 
@@ -1726,6 +1825,11 @@ a {
     font-size: 16px;
     line-height: 19px;
     border-radius: 5px;
+  }
+
+  .pagination .page-link {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -2072,6 +2176,18 @@ a {
 @supports not (font-size: clamp( 1.75rem , 1.6693548387rem  +  0.4032258065vw , 2rem )) {
     .buyers-scheme__subtitle {
       font-size: calc(1.75rem + 0.25 * (100vw - 20rem) / 62);
+    }
+}
+
+@supports (font-size: clamp( 2.625rem , 2.1612903226rem  +  2.3185483871vw , 4.0625rem )) {
+    .team-member__title {
+      font-size: clamp( 2.625rem , 2.1612903226rem  +  2.3185483871vw , 4.0625rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.625rem , 2.1612903226rem  +  2.3185483871vw , 4.0625rem )) {
+    .team-member__title {
+      font-size: calc(2.625rem + 1.4375 * (100vw - 20rem) / 62);
     }
 }
 }
