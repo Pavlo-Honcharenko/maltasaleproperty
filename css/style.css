@@ -1493,16 +1493,23 @@ a {
 
 .all-filters-container {
   width: 100%;
-  max-width: 1150px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .filter-container {
+  display: none;
+}
+
+.all-filters .show .filter-container {
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1764,7 +1771,7 @@ a {
   }
 
   .top-section__container {
-    padding-bottom: 7.5rem;
+    padding-bottom: 6.25rem;
   }
 
   .top-section__title {
@@ -1873,6 +1880,10 @@ a {
 
   .team-member__title {
     font-size: 4.0625rem;
+  }
+
+  .all-filters {
+    padding-top: 4.375rem;
   }
 }
 
@@ -2008,6 +2019,10 @@ a {
 
   .team-member__title {
     font-size: 2.375rem;
+  }
+
+  .all-filters {
+    padding-top: 0.0000000625rem;
   }
 }
 
@@ -2290,15 +2305,15 @@ a {
     }
 }
 
-@supports (padding-bottom: clamp( 3.125rem , 1.7137096774rem  +  7.0564516129vw , 7.5rem )) {
+@supports (padding-bottom: clamp( 3.125rem , 2.1169354839rem  +  5.0403225806vw , 6.25rem )) {
     .top-section__container {
-      padding-bottom: clamp( 3.125rem , 1.7137096774rem  +  7.0564516129vw , 7.5rem );
+      padding-bottom: clamp( 3.125rem , 2.1169354839rem  +  5.0403225806vw , 6.25rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 3.125rem , 1.7137096774rem  +  7.0564516129vw , 7.5rem )) {
+@supports not (padding-bottom: clamp( 3.125rem , 2.1169354839rem  +  5.0403225806vw , 6.25rem )) {
     .top-section__container {
-      padding-bottom: calc(3.125rem + 4.375 * (100vw - 20rem) / 62);
+      padding-bottom: calc(3.125rem + 3.125 * (100vw - 20rem) / 62);
     }
 }
 
@@ -2623,6 +2638,18 @@ a {
 @supports not (font-size: clamp( 2.375rem , 1.8306451613rem  +  2.7217741935vw , 4.0625rem )) {
     .team-member__title {
       font-size: calc(2.375rem + 1.6875 * (100vw - 20rem) / 62);
+    }
+}
+
+@supports (padding-top: clamp( 0.0000000625rem , -1.4112902399rem  +  7.0564515121vw , 4.375rem )) {
+    .all-filters {
+      padding-top: clamp( 0.0000000625rem , -1.4112902399rem  +  7.0564515121vw , 4.375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 0.0000000625rem , -1.4112902399rem  +  7.0564515121vw , 4.375rem )) {
+    .all-filters {
+      padding-top: calc(0.0000000625rem + 4.3749999375 * (100vw - 20rem) / 62);
     }
 }
 }

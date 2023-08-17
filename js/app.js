@@ -112,6 +112,46 @@
             checkbox.checked = false;
         }));
     }));
+    function handleSelectClearAllRent(selectId, clearId, checkboxClass) {
+        document.getElementById(selectId).addEventListener("click", (function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            document.querySelectorAll(checkboxClass).forEach((function(checkbox) {
+                checkbox.checked = true;
+            }));
+        }));
+        document.getElementById(clearId).addEventListener("click", (function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            document.querySelectorAll(checkboxClass).forEach((function(checkbox) {
+                checkbox.checked = false;
+            }));
+        }));
+    }
+    handleSelectClearAllRent("selectAllRentPropertyType", "clearAllRentPropertyType", ".property-checkbox");
+    handleSelectClearAllRent("selectAllRentFeatures", "clearAllRentFeatures", ".features-checkbox");
+    var priceSliderRent = document.getElementById("priceSliderRent");
+    noUiSlider.create(priceSliderRent, {
+        start: [ 1e3, 5e3 ],
+        connect: true,
+        step: 100,
+        range: {
+            min: 0,
+            max: 1e4
+        }
+    });
+    var fromPriceRent = document.getElementById("fromPriceRent");
+    var toPriceRent = document.getElementById("toPriceRent");
+    priceSliderRent.noUiSlider.on("update", (function(values, handle) {
+        var value = values[handle];
+        if (handle) toPriceRent.value = value; else fromPriceRent.value = value;
+    }));
+    fromPriceRent.addEventListener("change", (function() {
+        priceSliderRent.noUiSlider.set([ this.value, null ]);
+    }));
+    toPriceRent.addEventListener("change", (function() {
+        priceSliderRent.noUiSlider.set([ null, this.value ]);
+    }));
     window["FLS"] = true;
     isWebp();
 })();
