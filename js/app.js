@@ -1,18 +1,5 @@
 (() => {
     "use strict";
-    function isWebp() {
-        function testWebP(callback) {
-            let webP = new Image;
-            webP.onload = webP.onerror = function() {
-                callback(webP.height == 2);
-            };
-            webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-        }
-        testWebP((function(support) {
-            let className = support === true ? "webp" : "no-webp";
-            document.documentElement.classList.add(className);
-        }));
-    }
     let addWindowScrollEvent = false;
     setTimeout((() => {
         if (addWindowScrollEvent) {
@@ -38,10 +25,12 @@
         }
         e.stopPropagation();
     }
-    document.querySelectorAll(".filters li").forEach((function(li) {
+    var filters = document.querySelectorAll(".filters li");
+    if (filters) filters.forEach((function(li) {
         li.addEventListener("click", handleLiClick);
     }));
-    document.getElementById("selectAllPropertyType").addEventListener("click", (function(e) {
+    var selectAllPropertyType = document.getElementById("selectAllPropertyType");
+    if (selectAllPropertyType) selectAllPropertyType.addEventListener("click", (function(e) {
         e.preventDefault();
         e.stopPropagation();
         document.querySelectorAll(".property-checkbox").forEach((function(checkbox) {
@@ -49,7 +38,8 @@
             checkbox.classList.add("_checked");
         }));
     }));
-    document.getElementById("clearAllPropertyType").addEventListener("click", (function(e) {
+    var clearAllPropertyType = document.getElementById("clearAllPropertyType");
+    if (clearAllPropertyType) clearAllPropertyType.addEventListener("click", (function(e) {
         e.preventDefault();
         e.stopPropagation();
         document.querySelectorAll(".property-checkbox").forEach((function(checkbox) {
@@ -58,14 +48,16 @@
         }));
     }));
     function handleSelectClearAll(selectId, clearId, checkboxClass) {
-        document.getElementById(selectId).addEventListener("click", (function(e) {
+        var selectElement = document.getElementById(selectId);
+        var clearElement = document.getElementById(clearId);
+        if (selectElement) selectElement.addEventListener("click", (function(e) {
             e.preventDefault();
             e.stopPropagation();
             document.querySelectorAll(checkboxClass).forEach((function(checkbox) {
                 checkbox.checked = true;
             }));
         }));
-        document.getElementById(clearId).addEventListener("click", (function(e) {
+        if (clearElement) clearElement.addEventListener("click", (function(e) {
             e.preventDefault();
             e.stopPropagation();
             document.querySelectorAll(checkboxClass).forEach((function(checkbox) {
@@ -77,35 +69,41 @@
     handleSelectClearAll("selectAllMalta", "clearAllMalta", ".malta-checkbox");
     handleSelectClearAll("selectAllGozo", "clearAllGozo", ".gozo-checkbox");
     var priceSlider = document.getElementById("priceSlider");
-    noUiSlider.create(priceSlider, {
-        start: [ 1e3, 5e3 ],
-        connect: true,
-        step: 100,
-        range: {
-            min: 0,
-            max: 1e4
+    if (priceSlider && noUiSlider) {
+        noUiSlider.create(priceSlider, {
+            start: [ 1e3, 5e3 ],
+            connect: true,
+            step: 100,
+            range: {
+                min: 0,
+                max: 1e4
+            }
+        });
+        var fromPrice = document.getElementById("fromPrice");
+        var toPrice = document.getElementById("toPrice");
+        if (fromPrice && toPrice) {
+            priceSlider.noUiSlider.on("update", (function(values, handle) {
+                var value = values[handle];
+                if (handle) toPrice.value = value; else fromPrice.value = value;
+            }));
+            fromPrice.addEventListener("change", (function() {
+                priceSlider.noUiSlider.set([ this.value, null ]);
+            }));
+            toPrice.addEventListener("change", (function() {
+                priceSlider.noUiSlider.set([ null, this.value ]);
+            }));
         }
-    });
-    var fromPrice = document.getElementById("fromPrice");
-    var toPrice = document.getElementById("toPrice");
-    priceSlider.noUiSlider.on("update", (function(values, handle) {
-        var value = values[handle];
-        if (handle) toPrice.value = value; else fromPrice.value = value;
-    }));
-    fromPrice.addEventListener("change", (function() {
-        priceSlider.noUiSlider.set([ this.value, null ]);
-    }));
-    toPrice.addEventListener("change", (function() {
-        priceSlider.noUiSlider.set([ null, this.value ]);
-    }));
-    document.getElementById("selectAllFeatures").addEventListener("click", (function(e) {
+    }
+    var selectAllFeatures = document.getElementById("selectAllFeatures");
+    if (selectAllFeatures) selectAllFeatures.addEventListener("click", (function(e) {
         e.preventDefault();
         e.stopPropagation();
         document.querySelectorAll(".features-checkbox").forEach((function(checkbox) {
             checkbox.checked = true;
         }));
     }));
-    document.getElementById("clearAllFeatures").addEventListener("click", (function(e) {
+    var clearAllFeatures = document.getElementById("clearAllFeatures");
+    if (clearAllFeatures) clearAllFeatures.addEventListener("click", (function(e) {
         e.preventDefault();
         e.stopPropagation();
         document.querySelectorAll(".features-checkbox").forEach((function(checkbox) {
@@ -113,14 +111,16 @@
         }));
     }));
     function handleSelectClearAllRent(selectId, clearId, checkboxClass) {
-        document.getElementById(selectId).addEventListener("click", (function(e) {
+        var selectElement = document.getElementById(selectId);
+        var clearElement = document.getElementById(clearId);
+        if (selectElement) selectElement.addEventListener("click", (function(e) {
             e.preventDefault();
             e.stopPropagation();
             document.querySelectorAll(checkboxClass).forEach((function(checkbox) {
                 checkbox.checked = true;
             }));
         }));
-        document.getElementById(clearId).addEventListener("click", (function(e) {
+        if (clearElement) clearElement.addEventListener("click", (function(e) {
             e.preventDefault();
             e.stopPropagation();
             document.querySelectorAll(checkboxClass).forEach((function(checkbox) {
@@ -131,27 +131,35 @@
     handleSelectClearAllRent("selectAllRentPropertyType", "clearAllRentPropertyType", ".property-checkbox");
     handleSelectClearAllRent("selectAllRentFeatures", "clearAllRentFeatures", ".features-checkbox");
     var priceSliderRent = document.getElementById("priceSliderRent");
-    noUiSlider.create(priceSliderRent, {
-        start: [ 1e3, 5e3 ],
-        connect: true,
-        step: 100,
-        range: {
-            min: 0,
-            max: 1e4
+    if (priceSliderRent && noUiSlider) {
+        noUiSlider.create(priceSliderRent, {
+            start: [ 1e3, 5e3 ],
+            connect: true,
+            step: 100,
+            range: {
+                min: 0,
+                max: 1e4
+            }
+        });
+        var fromPriceRent = document.getElementById("fromPriceRent");
+        var toPriceRent = document.getElementById("toPriceRent");
+        if (fromPriceRent && toPriceRent) {
+            priceSliderRent.noUiSlider.on("update", (function(values, handle) {
+                var value = values[handle];
+                if (handle) toPriceRent.value = value; else fromPriceRent.value = value;
+            }));
+            fromPriceRent.addEventListener("change", (function() {
+                priceSliderRent.noUiSlider.set([ this.value, null ]);
+            }));
+            toPriceRent.addEventListener("change", (function() {
+                priceSliderRent.noUiSlider.set([ null, this.value ]);
+            }));
         }
-    });
-    var fromPriceRent = document.getElementById("fromPriceRent");
-    var toPriceRent = document.getElementById("toPriceRent");
-    priceSliderRent.noUiSlider.on("update", (function(values, handle) {
-        var value = values[handle];
-        if (handle) toPriceRent.value = value; else fromPriceRent.value = value;
+    }
+    window.addEventListener("scroll", (function() {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        var element = document.querySelector(".contact-buttons-bottom-0");
+        if (element) if (scrollPosition >= 100) element.classList.add("_show-line"); else element.classList.remove("_show-line");
     }));
-    fromPriceRent.addEventListener("change", (function() {
-        priceSliderRent.noUiSlider.set([ this.value, null ]);
-    }));
-    toPriceRent.addEventListener("change", (function() {
-        priceSliderRent.noUiSlider.set([ null, this.value ]);
-    }));
-    window["FLS"] = true;
-    isWebp();
+    window["FLS"] = false;
 })();
