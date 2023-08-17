@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Brouse Property</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230817083425" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css?_v=20230817083425">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230817083425">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid">
+					<a href="" class="header__logo navbar-brand"><img src="img/logo.svg" alt="logo"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-burger">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a href="" class="nav-link" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">Browse Properties</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">Buying in Malta</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">The Team</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="nav-link" href="#">About Us</a>
+							</li>
+						</ul>
+						<a href="" class="btn btn-primary header-button">Contact</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="page">
+
+			<!-- SECTION top-section -->
+			<section class="top-section">
+
+				<div class="jumbotron jumbotron-fluid">
+					<div class="top-section__container">
+						<div class="top-section__title">
+							Browse properties in Malta
+						</div>
+
+
+
+						<div class="all-filters">
+							<div class="all-filters-container">
+								<!-- Tabs -->
+								<ul class="nav nav-tabs" id="filterTabs" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link active" id="for-sale-tab" data-bs-toggle="tab" href="#forSale" role="tab">For Sale</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" id="for-rent-tab" data-bs-toggle="tab" href="#forRent" role="tab">For
+											Rent</a>
+									</li>
+								</ul>
+
+								<!-- Tab Content -->
+								<div class="tab-content" id="filterTabsContent">
+									<!-- For Sale Content -->
+									<div class="tab-pane fade show active d-flex flex-wrap" id="forSale" role="tabpanel">
+										<!-- Весь ваш код фильтров для продажи здесь -->
+
+										<div class="filter-container d-flex flex-wrap">
+
+											<div class="filters">
+												<div class="filter-container">
+													<!-- Property Type Dropdown -->
+													<div class="dropdown filter-item">
+														<button class="btn custom-filter-button dropdown-toggle" type="button" id="propertyTypeDropdown" data-bs-toggle="dropdown">
+															Property Type
+														</button>
+														<div class="dropdown-menu">
+															<div class="dropdown-menu__header">
+																<a href="#" class="select-clear-links" id="selectAllPropertyType">Select
+																	All</a>
+																<a href="#" class="select-clear-links" id="clearAllPropertyType">Clear
+																	All</a>
+															</div>
+
+															<ul aria-labelledby="propertyTypeDropdown">
+
+																<li><input type="checkbox" class="custom-checkbox property-checkbox">
+																	<span class="property-item">Apartment</span>
+																</li>
+																<li><input type="checkbox" class="custom-checkbox property-checkbox">
+																	<span class="property-item">Penthouse</span>
+																</li>
+																<li><input type="checkbox" class="custom-checkbox property-checkbox">
+																	<span class="property-item">Townhouse</span>
+																</li>
+																<li><input type="checkbox" class="custom-checkbox property-checkbox">
+																	<span class="property-item">Villa</span>
+																</li>
+																<!-- More property types here -->
+															</ul>
+														</div>
+
+													</div>
+
+
+													<!-- Location Dropdown -->
+													<div class="dropdown filter-item">
+														<button class="btn custom-filter-button dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+															Location
+														</button>
+
+														<div class="dropdown-menu">
+															<!-- SDA Block -->
+															<div class="dropdown-menu-block">
+																<div class="dropdown-menu__title">SDA</div>
+																<div class="dropdown-menu__header">
+																	<a href="#" class="select-clear-links" id="selectAllSDA">Select
+																		All</a>
+																	<a href="#" class="select-clear-links" id="clearAllSDA">Clear All</a>
+																</div>
+																<ul aria-labelledby="locationDropdown">
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																		<span class="property-item">Fort Cambridge, Sliema</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																		<span class="property-item">The Quad Business Towers,
+																			Mriehel</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																		<span class="property-item">Portomaso, St Julians</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																		<span class="property-item">Kempinski Residences, Gozo</span>
+																	</li>
+																	<!-- More SDA locations here -->
+																</ul>
+															</div>
+
+															<!-- Malta Block -->
+															<div class="dropdown-menu-block">
+																<div class="dropdown-menu__title">Malta</div>
+																<div class="dropdown-menu__header">
+																	<a href="#" class="select-clear-links" id="selectAllMalta">Select
+																		All</a>
+																	<a href="#" class="select-clear-links" id="clearAllMalta">Clear
+																		All</a>
+																</div>
+																<ul aria-labelledby="locationDropdown">
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																		<span class="property-item">Attard</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																		<span class="property-item">Bahar Ic-Caghaq</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																		<span class="property-item">Balzan</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																		<span class="property-item">Balzan</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																		<span class="property-item">Birkirkara</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																		<span class="property-item">Birzebbuga</span>
+																	</li>
+																	<!-- More Malta locations here -->
+																</ul>
+															</div>
+
+															<!-- Gozo Block -->
+															<div class="dropdown-menu-block">
+																<div class="dropdown-menu__title">Gozo</div>
+																<div class="dropdown-menu__header">
+																	<a href="#" class="select-clear-links" id="selectAllGozo">Select
+																		All</a>
+																	<a href="#" class="select-clear-links" id="clearAllGozo">Clear
+																		All</a>
+																</div>
+																<ul aria-labelledby="locationDropdown">
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																		<span class="property-item">Ghajnsielem</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																		<span class="property-item">Gharb</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																		<span class="property-item">Ghasri</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																		<span class="property-item">Zebbug Gozo</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																		<span class="property-item">Kercem</span>
+																	</li>
+																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																		<span class="property-item">Mgar Gozo</span>
+																	</li>
+																	<!-- More Gozo locations here -->
+																</ul>
+															</div>
+														</div>
+
+													</div>
+
+
+													<!-- Beds Dropdown -->
+													<div class="dropdown filter-item">
+														<button class="btn custom-filter-button dropdown-toggle" type="button" id="bedsDropdown" data-bs-toggle="dropdown">
+															Beds
+														</button>
+														<ul class="dropdown-menu" aria-labelledby="bedsDropdown">
+															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+																<span class="property-item">1</span>
+															</li>
+															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+																<span class="property-item">2</span>
+															</li>
+															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+																<span class="property-item">3</span>
+															</li>
+															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+																<span class="property-item">4+</span>
+															</li>
+															<!-- More bed options here -->
+														</ul>
+													</div>
+
+
+													<!-- Baths Dropdown -->
+													<div class="dropdown filter-item">
+														<button class="btn custom-filter-button dropdown-toggle" type="button" id="bathsDropdown" data-bs-toggle="dropdown">
+															Baths
+														</button>
+														<ul class="dropdown-menu" aria-labelledby="bathsDropdown">
+															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+																<span class="property-item">1</span>
+															</li>
+															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+																<span class="property-item">2</span>
+															</li>
+															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+																<span class="property-item">3</span>
+															</li>
+															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+																<span class="property-item">4+</span>
+															</li>
+															<!-- More bath options here -->
+														</ul>
+													</div>
+
+
+													<!-- Price Dropdown -->
+													<div class="dropdown filter-item">
+														<button class="btn custom-filter-button dropdown-toggle" type="button" id="priceDropdown" data-bs-toggle="dropdown">
+															Price
+														</button>
+														<div class="dropdown-menu dropdown-menu-block dropdown-menu-body p-3" aria-labelledby="priceDropdown">
+															<!-- добавлен класс dropdown-menu-body -->
+															<div class="input-wrapper">
+																<label for="fromPrice">From</label>
+																<input type="text" id="fromPrice" class="price-input">
+															</div>
+															<div class="input-wrapper">
+																<label for="toPrice">To</label>
+																<input type="text" id="toPrice" class="price-input">
+															</div>
+															<div id="priceSlider"></div>
+														</div>
+													</div>
+
+
+													<!-- Features Dropdown -->
+													<div class="dropdown filter-item">
+														<button class="btn custom-filter-button dropdown-toggle" type="button" id="featuresDropdown" data-bs-toggle="dropdown">
+															Features
+														</button>
+														<div class="dropdown-menu">
+															<div class="dropdown-menu__header">
+																<a href="#" class="select-clear-links" id="selectAllFeatures">Select
+																	All</a>
+																<a href="#" class="select-clear-links" id="clearAllFeatures">Clear
+																	All</a>
+															</div>
+															<ul aria-labelledby="featuresDropdown">
+																<li><input type="checkbox" class="custom-checkbox features-checkbox">
+																	<span class="property-item">Pool</span>
+																</li>
+																<li><input type="checkbox" class="custom-checkbox features-checkbox">
+																	<span class="property-item">Garage</span>
+																</li>
+																<li><input type="checkbox" class="custom-checkbox features-checkbox">
+																	<span class="property-item">Views</span>
+																</li>
+																<li><input type="checkbox" class="custom-checkbox features-checkbox">
+																	<span class="property-item">Roof Garden</span>
+																</li>
+																<!-- More features here -->
+															</ul>
+														</div>
+
+													</div>
+
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+
+									<!-- For Rent Content -->
+									<div class="tab-pane fade d-flex flex-wrap" id="forRent" role="tabpanel">
+										<!-- Весь ваш код фильтров для аренды здесь -->
+										ыыыыы
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+			</section>
+			<!-- End of SECTION top-section -->
+
+
+
+
+			<!-- SECTION team-member -->
+			<section class="team-member">
+				<div class="team-member__container">
+					<div class="team-member__title">
+						Arnold Schwarzenegger
+					</div>
+					<div class="team-member__text">
+						Arnold Alois Schwarzenegger (born July 30, 1947) is an Austrian and American actor, businessman,
+						filmmaker, politician, and retired professional bodybuilder best known for his roles in high-profile
+						action movies. He served as the 38th governor of California from 2003 to 2011 and was among Time
+						magazine’s 100 most influential people in the world in 2004 and 2007.
+					</div>
+				</div>
+			</section>
+			<!-- End of SECTION team-member -->
+
+
+
+			<!-- SECTION properties -->
+			<section class="properties">
+				<div class="properties__container">
+					<div class="center-title-2 text-center mx-auto">
+						Properties for Sale and Rent in Malta
+					</div>
+
+					<div class="objects">
+
+						<!-- Sale Blocks -->
+						<div class="object object--sale">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Sale</div>
+									<div class="object__price">€2,000,000</div>
+								</div>
+								<div class="object__title">4 Bedroom Penthouse with Large Terrace in Malta</div>
+								<p class="object__text">Located in the South of Malta, minutes away from the beautiful
+									Mediterranean Sea. Ideal as a family home that can be enjoyed 365 days a year.</p>
+								<p class="object__details"><span>300 sqm</span> <span>4 Bedroom</span> <span>2 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS1" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Sale Blocks, changing the content as needed -->
+
+
+						<!-- Rent Blocks -->
+						<div class="object object--rent">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Rent</div>
+									<div class="object__price">€1,000/month</div>
+								</div>
+								<div class="object__title">2 Bedroom Apartment with Balcony in Malta</div>
+								<p class="object__text">Located in the heart of Malta, close to shopping and dining. Perfect for
+									a small family or professionals.</p>
+								<p class="object__details"><span>150 sqm</span> <span>2 Bedroom</span> <span>1 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS7" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Rent Blocks, changing the content as needed -->
+
+
+						<!-- Rent Blocks -->
+						<div class="object object--rent">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Rent</div>
+									<div class="object__price">€1,000/month</div>
+								</div>
+								<div class="object__title">2 Bedroom Apartment with Balcony in Malta</div>
+								<p class="object__text">Located in the heart of Malta, close to shopping and dining. Perfect for
+									a small family or professionals.</p>
+								<p class="object__details"><span>150 sqm</span> <span>2 Bedroom</span> <span>1 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS7" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Rent Blocks, changing the content as needed -->
+
+
+						<!-- Sale Blocks -->
+						<div class="object object--sale">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Sale</div>
+									<div class="object__price">€2,000,000</div>
+								</div>
+								<div class="object__title">4 Bedroom Penthouse with Large Terrace in Malta</div>
+								<p class="object__text">Located in the South of Malta, minutes away from the beautiful
+									Mediterranean Sea. Ideal as a family home that can be enjoyed 365 days a year.</p>
+								<p class="object__details"><span>300 sqm</span> <span>4 Bedroom</span> <span>2 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS1" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Sale Blocks, changing the content as needed -->
+
+
+						<!-- Sale Blocks -->
+						<div class="object object--sale">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Sale</div>
+									<div class="object__price">€2,000,000</div>
+								</div>
+								<div class="object__title">4 Bedroom Penthouse with Large Terrace in Malta</div>
+								<p class="object__text">Located in the South of Malta, minutes away from the beautiful
+									Mediterranean Sea. Ideal as a family home that can be enjoyed 365 days a year.</p>
+								<p class="object__details"><span>300 sqm</span> <span>4 Bedroom</span> <span>2 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS1" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Sale Blocks, changing the content as needed -->
+
+
+						<!-- Rent Blocks -->
+						<div class="object object--rent">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Rent</div>
+									<div class="object__price">€1,000/month</div>
+								</div>
+								<div class="object__title">2 Bedroom Apartment with Balcony in Malta</div>
+								<p class="object__text">Located in the heart of Malta, close to shopping and dining. Perfect for
+									a small family or professionals.</p>
+								<p class="object__details"><span>150 sqm</span> <span>2 Bedroom</span> <span>1 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS7" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Rent Blocks, changing the content as needed -->
+
+
+						<!-- Sale Blocks -->
+						<div class="object object--sale">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Sale</div>
+									<div class="object__price">€2,000,000</div>
+								</div>
+								<div class="object__title">4 Bedroom Penthouse with Large Terrace in Malta</div>
+								<p class="object__text">Located in the South of Malta, minutes away from the beautiful
+									Mediterranean Sea. Ideal as a family home that can be enjoyed 365 days a year.</p>
+								<p class="object__details"><span>300 sqm</span> <span>4 Bedroom</span> <span>2 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS1" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Sale Blocks, changing the content as needed -->
+
+
+						<!-- Rent Blocks -->
+						<div class="object object--rent">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Rent</div>
+									<div class="object__price">€1,000/month</div>
+								</div>
+								<div class="object__title">2 Bedroom Apartment with Balcony in Malta</div>
+								<p class="object__text">Located in the heart of Malta, close to shopping and dining. Perfect for
+									a small family or professionals.</p>
+								<p class="object__details"><span>150 sqm</span> <span>2 Bedroom</span> <span>1 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS7" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Rent Blocks, changing the content as needed -->
+
+
+						<!-- Rent Blocks -->
+						<div class="object object--rent">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Rent</div>
+									<div class="object__price">€1,000/month</div>
+								</div>
+								<div class="object__title">2 Bedroom Apartment with Balcony in Malta</div>
+								<p class="object__text">Located in the heart of Malta, close to shopping and dining. Perfect for
+									a small family or professionals.</p>
+								<p class="object__details"><span>150 sqm</span> <span>2 Bedroom</span> <span>1 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS7" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Rent Blocks, changing the content as needed -->
+
+
+						<!-- Sale Blocks -->
+						<div class="object object--sale">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Sale</div>
+									<div class="object__price">€2,000,000</div>
+								</div>
+								<div class="object__title">4 Bedroom Penthouse with Large Terrace in Malta</div>
+								<p class="object__text">Located in the South of Malta, minutes away from the beautiful
+									Mediterranean Sea. Ideal as a family home that can be enjoyed 365 days a year.</p>
+								<p class="object__details"><span>300 sqm</span> <span>4 Bedroom</span> <span>2 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS1" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Sale Blocks, changing the content as needed -->
+
+
+						<!-- Sale Blocks -->
+						<div class="object object--sale">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Sale</div>
+									<div class="object__price">€2,000,000</div>
+								</div>
+								<div class="object__title">4 Bedroom Penthouse with Large Terrace in Malta</div>
+								<p class="object__text">Located in the South of Malta, minutes away from the beautiful
+									Mediterranean Sea. Ideal as a family home that can be enjoyed 365 days a year.</p>
+								<p class="object__details"><span>300 sqm</span> <span>4 Bedroom</span> <span>2 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS1" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Sale Blocks, changing the content as needed -->
+
+
+						<!-- Rent Blocks -->
+						<div class="object object--rent">
+							<div class="object__image">
+								<img src="img/property.jpg" alt="Property Image" class="img-fluid">
+							</div>
+							<div class="object__info">
+								<div class="object__header">
+									<div class="object__label">For Rent</div>
+									<div class="object__price">€1,000/month</div>
+								</div>
+								<div class="object__title">2 Bedroom Apartment with Balcony in Malta</div>
+								<p class="object__text">Located in the heart of Malta, close to shopping and dining. Perfect for
+									a small family or professionals.</p>
+								<p class="object__details"><span>150 sqm</span> <span>2 Bedroom</span> <span>1 Bathroom</span>
+								</p>
+								<a href="URL_FOR_MORE_DETAILS7" class="object__button">Show more details</a>
+							</div>
+						</div>
+						<!-- Repeat for other Rent Blocks, changing the content as needed -->
+
+
+					</div>
+
+					<div class="read-more row justify-content-center">
+						<nav class="pagination-wrapper" aria-label="Page navigation">
+							<ul class="pagination">
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item active"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item"><a class="page-link" href="#">6</a></li>
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+			</section>
+			<!-- End of SECTION properties -->
+
+
+
+
+
+			<!-- SECTION save -->
+			<section class="save">
+				<div class="save__container">
+					<div class="row">
+						<div class="save-col col-lg-8 col-12">
+							<div class="save__title">
+								Save up to <span>€20,000</span> when furnishing your new home
+							</div>
+						</div>
+						<div class="save-col col-lg-4 col-12 text-center">
+							<a href="" class="button-blue">Find out more</a>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- End of SECTION save -->
+
+
+
+			<!-- SECTION contact-buttons -->
+			<section class="contact-buttons">
+				<div class="contact-buttons__container">
+					<div class="contact-buttons__wrapper">
+						<!-- Button to trigger the modal -->
+						<a href="#" class="contact-form-button" data-bs-toggle="modal" data-bs-target="#contactFormModal">Contact Form</a>
+
+						<a href="https://wa.me/PHONE_NUMBER" class="whatsapp-button" target="_blank">WhatsApp</a>
+					</div>
+				</div>
+			</section>
+			<!-- End of SECTION contact-buttons -->
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						<div class="modal-body">
+							<div class="contact-form bg-grey">
+								<div class="contact-form__container">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									<form action="" method="POST">
+										<div class="row">
+											<div class="col-lg-6 col-12">
+												<div class="row">
+													<div class="col-12">
+														<input type="text" name="form[name]" data-error="Error" placeholder="* Your name" class="input">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12">
+														<input type="text" name="form[email]" data-error="Error" placeholder="* Your e-Mail" class="input">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-3">
+														<input type="text" name="form[email]" data-error="Error" placeholder="Prefix" class="input">
+													</div>
+													<div class="col-9">
+														<input type="text" name="form[email]" data-error="Error" placeholder="Your phone" class="input">
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-12">
+														<input type="text" name="form[email]" data-error="Error" placeholder="Property ID" class="input">
+													</div>
+												</div>
+												<div class="row checkbox-pc">
+													<div class="col-12">
+														<div class="checkbox">
+															<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+															<label for="c_1" class="checkbox__label"><span class="checkbox__text">I
+																	consent to having this website store my submitted information so they
+																	can respond to my inquiry.</span></label>
+														</div>
+													</div>
+												</div>
+
+
+											</div>
+											<div class="col-lg-6 col-12">
+												<div class="row row-textarea">
+													<div class="col-12">
+														<textarea name="" id="" cols="30" rows="10" placeholder="* Your message">
+
+														</textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row checkbox-mobile">
+											<div class="col-12">
+												<div class="checkbox">
+													<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="c_1" class="checkbox__label"><span class="checkbox__text">I consent
+															to having this website store my submitted information so they can respond
+															to my inquiry.</span></label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<button type="submit" class="button">Send</button>
+											</div>
+										</div>
+
+
+									</form>
+								</div>
+								</в>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+		</main>
+		<footer class="footer text-white">
+			<div class="footer__container">
+				<div class="container-fluid">
+					<div class="row row-top">
+						<div class="footer__col col-lg-9">
+							<div class="col">
+								<img src="img/logo-footer.svg" alt="Logo" class="footer-logo">
+								<div class="footer__text">Find your new home in Malta with MaltaSaleProperty.com</div>
+								<div class="footer__mail">
+									<img src="img/icons/icon-mail.svg" alt="mail">
+									<a href="mailto:malta@maltasalesproperty.com">malta@maltasalesproperty.com</a>
+								</div>
+								<div class="footer__phone">
+									<img src="img/icons/icon-phone.svg" alt="phone">
+									<a href="tel:+35612345678">+356 12345678</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row row-top row-top-links">
+						<div class="footer__col">
+							<div class="footer__title">Our Service</div>
+							<ul class="list-unstyled">
+								<li><a href="">Buying Property in Malta</a></li>
+								<li><a href="">Legal Process</a></li>
+								<li><a href="">Browse Properties</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__col">
+							<div class="footer__title"></div>
+							<ul class="list-unstyled">
+								<li><a href="">About Us</a></li>
+								<li><a href="">About Malta</a></li>
+								<li><a href="">Contact Us</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__col">
+							<div class="footer__title">Social Media</div>
+							<ul class="list-unstyled">
+								<li><a href="">YouTube</a></li>
+								<li><a href="">Instagram</a></li>
+								<li><a href="">Twitter</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="row footer-row-bottom">
+				<div>Copyright MaltaSaleProperty.com 2023 <span>All Right Reserved</span></div>
+			</div>
+		</footer>
+	</div>
+	<!-- Bootstrap and jQuery scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230817083425" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js?_v=20230817083425"></script>
+	<script src="js/app.min.js?_v=20230817083425"></script>
+</body>
+
+</html>

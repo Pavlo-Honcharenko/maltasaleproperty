@@ -1174,13 +1174,10 @@ footer a:hover {
 
 .contact-form__container .checkbox__input:checked + .checkbox__label::after {
   content: "✔";
-  /* Content for the checkmark */
   position: absolute;
   left: 3px;
-  /* Positioning the checkmark */
   top: 0;
   font-size: 18px;
-  /* Size of the checkmark */
 }
 
 .contact-form__container .row-textarea {
@@ -1347,6 +1344,9 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  pointer-events: none;
+  height: 0;
+  position: relative;
 }
 
 .contact-buttons__wrapper {
@@ -1363,6 +1363,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .contact-form-button,
@@ -1419,6 +1421,333 @@ a {
   max-width: 1200px;
   position: relative;
   padding: 0 10px;
+}
+
+.all-filters {
+  width: 100%;
+}
+
+.all-filters .nav-tabs {
+  border: 0;
+}
+
+.all-filters .nav-tabs .nav-item.show .nav-link,
+.all-filters .nav-tabs .nav-link.active {
+  color: initial;
+  background-color: initial;
+  border-color: initial;
+}
+
+.all-filters .nav-tabs .nav-link {
+  border: initial;
+  padding-left: 45px !important;
+  padding-right: 30px !important;
+}
+
+.all-filters .nav-tabs .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  color: #143A3A;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+.all-filters .nav-tabs .nav-link::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  border: 1px solid #DEE0E2;
+  background-color: #DEE0E2;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.all-filters .nav-tabs .nav-link.active::before {
+  background-color: #DEE0E2;
+}
+
+.all-filters .nav-tabs .nav-link.active::after {
+  content: "✔";
+  position: absolute;
+  left: 13px;
+  top: 6px;
+  font-size: 20px;
+}
+
+.all-filters .nav-tabs .nav-link.active {
+  font-weight: 500;
+}
+
+.all-filters-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.filter-container {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filter-item {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.select-clear-links {
+  color: #143A3A;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.property-item {
+  color: #143A3A;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.custom-checkbox {
+  width: 21px;
+  height: 21px;
+  background-color: #DEE0E2;
+}
+
+.custom-filter-button {
+  background-color: #ffffff;
+  border-radius: 6px;
+  height: 52px;
+  padding: 15px 60px 15px 15px;
+  color: #143A3A;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.custom-filter-button::before,
+.custom-filter-button::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 1.5px;
+  background-color: #97D2FF;
+  top: 25px;
+  /* Убираем стандартный треугольник Bootstrap для выпадающего меню */
+  display: initial;
+  margin: 0;
+  vertical-align: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  -webkit-transition: all 0.1s linear 0s;
+  transition: all 0.1s linear 0s;
+}
+
+.custom-filter-button::before {
+  right: 12px;
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.custom-filter-button::after {
+  right: 20px;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.custom-filter-button.show::before,
+.custom-filter-button.show::after {
+  right: 12px;
+  width: 10px;
+}
+
+.custom-filter-button.show::before {
+  top: 28px;
+  -webkit-transform: rotate(-50deg);
+      -ms-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+
+.custom-filter-button.show::after {
+  top: 21px;
+  -webkit-transform: rotate(50deg);
+      -ms-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+.filters .dropdown-menu {
+  margin-top: 5px !important;
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 15px !important;
+  border: 0;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu__title {
+  color: #143A3A;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.dropdown-menu-block:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.filters ul {
+  padding: 0;
+  margin: 0;
+}
+
+.filters li {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 6px 0 3px;
+}
+
+.filters #priceSlider {
+  margin-top: 12px;
+}
+
+.filters .noUi-connects,
+.filters .noUi-base {
+  height: 3px;
+}
+
+.filters .noUi-connect {
+  background: #5FAFEC;
+  height: 3px;
+}
+
+.filters .noUi-target {
+  background: #EFEFEF;
+  height: 2px;
+  border-radius: 0;
+  border: 0;
+  -webkit-box-shadow: initial;
+          box-shadow: initial;
+}
+
+.filters .noUi-horizontal {
+  height: 2px;
+}
+
+.filters .noUi-horizontal .noUi-handle {
+  width: 7px;
+  height: 7px;
+  right: -3px;
+  top: -2px;
+  border-radius: 50%;
+  background-color: #5FAFEC;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+}
+
+.filters .noUi-horizontal .noUi-handle::before,
+.filters .noUi-horizontal .noUi-handle::after {
+  content: "";
+  display: none;
+}
+
+.dropdown-menu__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+
+.dropdown-menu.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dropdown-menu.show li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.dropdown-menu.dropdown-menu-block.show {
+  display: block;
+}
+
+.input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-wrapper input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.input-wrapper label {
+  font-size: 10px;
+  width: 34px;
+  padding: 0;
+}
+
+.input-wrapper input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  background-color: #F5F5F5;
+  padding: 1px 4px;
+  color: #143A3A;
+  font-size: 12px;
 }
 
 @media (min-width: 61.99875em) {
@@ -1678,7 +2007,7 @@ a {
   }
 
   .team-member__title {
-    font-size: 2.625rem;
+    font-size: 2.375rem;
   }
 }
 
@@ -1830,6 +2159,16 @@ a {
   .contact-form__container .button {
     padding: 13px 30px 14px;
   }
+
+  .filter-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 20px);
+            flex: 0 0 calc(50% - 20px);
+  }
+
+  .filter-item .btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 36.25em) {
@@ -1920,6 +2259,12 @@ a {
   .pagination .page-link {
     width: 35px;
     height: 35px;
+  }
+
+  .filter-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }
 
@@ -2269,15 +2614,15 @@ a {
     }
 }
 
-@supports (font-size: clamp( 2.625rem , 2.1612903226rem  +  2.3185483871vw , 4.0625rem )) {
+@supports (font-size: clamp( 2.375rem , 1.8306451613rem  +  2.7217741935vw , 4.0625rem )) {
     .team-member__title {
-      font-size: clamp( 2.625rem , 2.1612903226rem  +  2.3185483871vw , 4.0625rem );
+      font-size: clamp( 2.375rem , 1.8306451613rem  +  2.7217741935vw , 4.0625rem );
     }
 }
 
-@supports not (font-size: clamp( 2.625rem , 2.1612903226rem  +  2.3185483871vw , 4.0625rem )) {
+@supports not (font-size: clamp( 2.375rem , 1.8306451613rem  +  2.7217741935vw , 4.0625rem )) {
     .team-member__title {
-      font-size: calc(2.625rem + 1.4375 * (100vw - 20rem) / 62);
+      font-size: calc(2.375rem + 1.6875 * (100vw - 20rem) / 62);
     }
 }
 }
