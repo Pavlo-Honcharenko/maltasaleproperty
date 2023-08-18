@@ -158,8 +158,16 @@
     }
     window.addEventListener("scroll", (function() {
         var scrollPosition = window.scrollY || window.pageYOffset;
-        var element = document.querySelector(".contact-buttons-bottom-0");
-        if (element) if (scrollPosition >= 100) element.classList.add("_show-line"); else element.classList.remove("_show-line");
+        var element = document.querySelector(".contact-buttons");
+        if (element) if (scrollPosition >= 250) element.classList.add("_show-line"); else element.classList.remove("_show-line");
     }));
+    function toggleMobileVersionClass() {
+        var contactButtons = document.querySelector(".contact-buttons");
+        if (window.innerWidth < 992) {
+            if (!contactButtons.classList.contains("_mobile-version")) contactButtons.classList.add("_mobile-version");
+        } else contactButtons.classList.remove("_mobile-version");
+    }
+    window.addEventListener("load", toggleMobileVersionClass);
+    window.addEventListener("resize", toggleMobileVersionClass);
     window["FLS"] = false;
 })();
