@@ -68,6 +68,9 @@
     handleSelectClearAll("selectAllSDA", "clearAllSDA", ".sda-checkbox");
     handleSelectClearAll("selectAllMalta", "clearAllMalta", ".malta-checkbox");
     handleSelectClearAll("selectAllGozo", "clearAllGozo", ".gozo-checkbox");
+    handleSelectClearAll("selectAllRentSDA", "clearAllRentSDA", ".sda-checkbox");
+    handleSelectClearAll("selectAllRentMalta", "clearAllRentMalta", ".malta-checkbox");
+    handleSelectClearAll("selectAllRentGozo", "clearAllRentGozo", ".gozo-checkbox");
     var priceSlider = document.getElementById("priceSlider");
     if (priceSlider && noUiSlider) {
         noUiSlider.create(priceSlider, {
@@ -159,7 +162,7 @@
     window.addEventListener("scroll", (function() {
         var scrollPosition = window.scrollY || window.pageYOffset;
         var element = document.querySelector(".contact-buttons");
-        if (element) if (scrollPosition >= 250) element.classList.add("_show-line"); else element.classList.remove("_show-line");
+        if (element) if (scrollPosition >= 350) element.classList.add("_show-line"); else element.classList.remove("_show-line");
     }));
     function toggleMobileVersionClass() {
         var contactButtons = document.querySelector(".contact-buttons");
