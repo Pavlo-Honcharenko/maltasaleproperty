@@ -218,7 +218,7 @@ h6 {
   color: #FFF;
   font-size: 18px;
   font-weight: 500;
-  padding: 16px 28px 17px;
+  padding: 14px 28px 15px;
   border-radius: 8px;
 }
 
@@ -2256,6 +2256,21 @@ a {
   display: none;
 }
 
+.contact-buttons__container {
+  position: relative;
+  height: 0;
+}
+
+.contact-buttons__container #top-section-buttons {
+  position: absolute;
+  right: 10px;
+  bottom: -23px;
+}
+
+.member-card .contact-buttons__wrapper {
+  display: none;
+}
+
 @media (min-width: 61.99875em) {
   .header .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end;
@@ -2878,6 +2893,10 @@ a {
   ._show-line .member-card .whatsapp-button,
   ._mobile-version .member-card .whatsapp-button {
     padding-left: 25px;
+  }
+
+  .contact-buttons__container #top-section-buttons {
+    display: none;
   }
 }
 

@@ -166,9 +166,14 @@
         }
     }
     window.addEventListener("scroll", (function() {
-        var scrollPosition = window.scrollY || window.pageYOffset;
+        window.scrollY || window.pageYOffset;
         var element = document.querySelector(".contact-buttons");
-        if (element) if (scrollPosition >= 350) element.classList.add("_show-line"); else element.classList.remove("_show-line");
+        var topSectionButtons = document.getElementById("top-section-buttons");
+        if (topSectionButtons) {
+            var topSectionButtonsPosition = topSectionButtons.getBoundingClientRect().top;
+            var topSectionButtonsHeight = topSectionButtons.offsetHeight;
+            if (topSectionButtonsPosition + topSectionButtonsHeight < 0) element.classList.add("_show-line"); else element.classList.remove("_show-line");
+        }
     }));
     function toggleMobileVersionClass() {
         var contactButtons = document.querySelector(".contact-buttons");
