@@ -11,9 +11,15 @@
     }), 0);
     document.addEventListener("DOMContentLoaded", (function() {
         const navbarToggler = document.querySelector(".navbar-toggler");
-        document.querySelector(".navbar-nav");
+        const wrapper = document.querySelector(".wrapper");
         navbarToggler.addEventListener("click", (function() {
-            if (!navbarToggler.classList.contains("collapsed")) navbarToggler.classList.add("collapsed"); else navbarToggler.classList.remove("collapsed");
+            if (!navbarToggler.classList.contains("collapsed")) {
+                navbarToggler.classList.add("collapsed");
+                wrapper.classList.add("_open-mob-menu");
+            } else {
+                navbarToggler.classList.remove("collapsed");
+                wrapper.classList.remove("_open-mob-menu");
+            }
         }));
     }));
     function handleLiClick(e) {
@@ -166,7 +172,7 @@
     }));
     function toggleMobileVersionClass() {
         var contactButtons = document.querySelector(".contact-buttons");
-        if (window.innerWidth < 992) {
+        if (contactButtons) if (window.innerWidth < 992) {
             if (!contactButtons.classList.contains("_mobile-version")) contactButtons.classList.add("_mobile-version");
         } else contactButtons.classList.remove("_mobile-version");
     }

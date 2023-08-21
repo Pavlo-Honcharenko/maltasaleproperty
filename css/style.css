@@ -223,9 +223,9 @@ h6 {
 }
 
 .header #navbarNav {
-  background-color: #fff;
-  z-index: 2;
   gap: 30px;
+  z-index: 200;
+  background-color: #fff;
 }
 
 .header .navbar-nav {
@@ -302,7 +302,6 @@ footer {
   padding: 0;
   font-size: 14px;
   position: relative;
-  z-index: 300;
 }
 
 footer p,
@@ -1064,7 +1063,9 @@ footer a:hover {
 }
 
 .buyers-scheme .scheme-card__image {
-  width: 88px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1074,7 +1075,7 @@ footer a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 34px;
+  margin-right: 15px;
 }
 
 .buyers-scheme .scheme-card__text {
@@ -1866,6 +1867,15 @@ a {
   gap: 0;
 }
 
+.nav-item.current-menu-item a {
+  font-weight: 500;
+}
+
+.footer .footer__title {
+  font-size: 14px;
+  min-height: 22px;
+}
+
 .property-description__title {
   color: #143A3A;
   font-weight: 400;
@@ -2228,6 +2238,22 @@ a {
 ._mobile-version .object-card > * {
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.main-carousel-home-page .carousel-control-prev,
+.main-carousel-home-page .carousel-control-next {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+
+.main-carousel-home-page .carousel-control-next {
+  right: 0;
+}
+
+._open-mob-menu .contact-buttons._mobile-version {
+  display: none;
 }
 
 @media (min-width: 61.99875em) {
@@ -2782,6 +2808,7 @@ a {
   .header #navbarNav {
     margin-left: -15px;
     margin-right: -15px;
+    min-height: calc(100vh - 90px);
   }
 
   .header .navbar-collapse {
@@ -2793,7 +2820,7 @@ a {
   .header .navbar-nav {
     width: 220px;
     display: block;
-    margin: auto;
+    margin-left: 15px;
   }
 
   .section-2__col-content {
