@@ -165,6 +165,11 @@
             }));
         }
     }
+    document.querySelectorAll(".dropdown-menu-block").forEach((function(dropdownMenu) {
+        dropdownMenu.addEventListener("click", (function(e) {
+            e.stopPropagation();
+        }));
+    }));
     function toggleShowLine() {
         var contactButtonsContainer = document.querySelector(".contact-buttons__container");
         var topSectionButtons = document.getElementById("top-section-buttons");
