@@ -1938,7 +1938,7 @@ a {
 
 .object-card {
   position: absolute;
-  bottom: 0;
+  bottom: -52px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2155,6 +2155,18 @@ a {
   display: block;
 }
 
+.contact-buttons__container._show-line,
+.contact-buttons__container._mobile-version {
+  position: fixed;
+  height: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+}
+
 ._show-line,
 ._mobile-version {
   height: 90px;
@@ -2173,6 +2185,7 @@ a {
 
 ._show-line .object-card,
 ._mobile-version .object-card {
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -2184,8 +2197,8 @@ a {
       flex-wrap: wrap;
   -webkit-filter: initial;
           filter: initial;
-  bottom: initial;
-  top: 0;
+  bottom: 0;
+  top: initial;
   padding: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2269,6 +2282,49 @@ a {
 
 .member-card .contact-buttons__wrapper {
   display: none;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item .carousel-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-inner {
+  height: 53vw;
+}
+
+.member-buttons {
+  bottom: -23px;
+}
+
+._show-line .member-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  min-width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  bottom: 0;
+}
+
+._show-line .member-buttons .contact-form-button,
+._show-line .member-buttons .whatsapp-button {
+  margin: 0;
 }
 
 @media (min-width: 61.99875em) {
@@ -2735,6 +2791,12 @@ a {
   }
 }
 
+@media (max-width: 83.75em) {
+  .member-buttons {
+    padding: 0 15px;
+  }
+}
+
 @media (max-width: 81.25em) {
   .footer__container .container-fluid {
     -ms-flex-wrap: wrap;
@@ -2789,8 +2851,6 @@ a {
 
   ._show-line .object-card,
   ._mobile-version .object-card {
-    top: initial;
-    bottom: 0;
     border-radius: 0;
   }
 
@@ -2897,6 +2957,32 @@ a {
 
   .contact-buttons__container #top-section-buttons {
     display: none;
+  }
+
+  .member-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    min-width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    bottom: 0;
+  }
+
+  .member-buttons .contact-form-button,
+  .member-buttons .whatsapp-button {
+    margin: 0;
   }
 }
 
@@ -3152,6 +3238,24 @@ a {
   ._mobile-version .object-card .whatsapp-button {
     width: 171px;
     gap: 0;
+  }
+}
+
+@media (max-width: 26.875em) {
+  ._mobile-version .contact-buttons__wrapper.member-buttons {
+    gap: 10px;
+  }
+
+  ._mobile-version .contact-buttons__wrapper.member-buttons .btn {
+    height: 42px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  ._mobile-version .contact-buttons__wrapper.member-buttons .whatsapp-button {
+    padding-left: 18px;
+    background-size: 28px 28px;
   }
 }
 

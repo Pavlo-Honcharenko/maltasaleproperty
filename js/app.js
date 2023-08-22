@@ -165,18 +165,19 @@
             }));
         }
     }
-    window.addEventListener("scroll", (function() {
-        window.scrollY || window.pageYOffset;
-        var element = document.querySelector(".contact-buttons");
+    function toggleShowLine() {
+        var contactButtonsContainer = document.querySelector(".contact-buttons__container");
         var topSectionButtons = document.getElementById("top-section-buttons");
-        if (topSectionButtons) {
+        if (contactButtonsContainer) if (topSectionButtons) {
             var topSectionButtonsPosition = topSectionButtons.getBoundingClientRect().top;
             var topSectionButtonsHeight = topSectionButtons.offsetHeight;
-            if (topSectionButtonsPosition + topSectionButtonsHeight < 0) element.classList.add("_show-line"); else element.classList.remove("_show-line");
+            if (topSectionButtonsPosition + topSectionButtonsHeight < 0) contactButtonsContainer.classList.add("_show-line"); else contactButtonsContainer.classList.remove("_show-line");
         }
-    }));
+    }
+    toggleShowLine();
+    window.addEventListener("scroll", toggleShowLine);
     function toggleMobileVersionClass() {
-        var contactButtons = document.querySelector(".contact-buttons");
+        var contactButtons = document.querySelector(".contact-buttons__container");
         if (contactButtons) if (window.innerWidth < 992) {
             if (!contactButtons.classList.contains("_mobile-version")) contactButtons.classList.add("_mobile-version");
         } else contactButtons.classList.remove("_mobile-version");
