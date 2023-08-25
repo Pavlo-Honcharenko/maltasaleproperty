@@ -459,9 +459,10 @@ footer a:hover {
 
 .main-carousel .img-fluid {
   min-height: 300px;
+  width: 100%;
+  height: 47vw;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
 }
 
 .main-carousel .slider-content {
@@ -1975,6 +1976,9 @@ a {
 .property-description__title-plans {
   color: #143A3A;
   font-weight: 500;
+  line-height: 150%;
+  margin-top: 60px;
+  margin-bottom: 15px;
 }
 
 .plans {
@@ -2366,7 +2370,7 @@ a {
 }
 
 .carousel-inner {
-  height: 53vw;
+  height: 47vw;
 }
 
 .member-buttons {
@@ -2414,6 +2418,93 @@ a {
           transform: translateY(-50%);
   pointer-events: none;
   /* Это предотвращает взаимодействие с символом */
+}
+
+.property-info__container .object-card {
+  position: relative;
+  top: initial;
+  left: initial;
+  right: initial;
+  bottom: initial;
+  padding: 0 !important;
+}
+
+.property-info__container {
+  padding: 0;
+}
+
+.object-card {
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-filter: initial;
+          filter: initial;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.object-card .property-details {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.object-card .property-details__title {
+  color: #143A3A;
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 110%;
+}
+
+.object-card .property-features {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.object-card__lable {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+
+.object-card__title-features {
+  color: #143A3A;
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 110%;
+}
+
+.object-card__icons {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.object-card__icon-item {
+  padding-right: 20px;
+}
+
+.object-card__features {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.object-card__property-id {
+  font-size: 14px;
 }
 
 @media (min-width: 61.99875em) {
@@ -2627,6 +2718,14 @@ a {
   ._mobile-version .object-card {
     gap: 1.875rem;
   }
+
+  .object-card .property-details__title {
+    font-size: 2.5rem;
+  }
+
+  .object-card__title-features {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -2649,7 +2748,7 @@ a {
 @media (max-width: 40em) {
   .carousel-control-next,
   .carousel-control-prev {
-    margin-bottom: 22%;
+    margin-bottom: 25%;
   }
 
   .carousel-indicators [data-bs-target] {
@@ -2881,6 +2980,14 @@ a {
   ._show-line .object-card,
   ._mobile-version .object-card {
     gap: 0.875rem;
+  }
+
+  .object-card .property-details__title {
+    font-size: 1.875rem;
+  }
+
+  .object-card__title-features {
+    font-size: 1.875rem;
   }
 }
 
@@ -3194,6 +3301,10 @@ a {
     width: 100%;
   }
 
+  .property-description__title-plans {
+    margin-top: 50px;
+  }
+
   ._show-line .member-card,
   ._mobile-version .member-card {
     -ms-flex-wrap: wrap;
@@ -3235,6 +3346,18 @@ a {
   ._mobile-version .object-card {
     gap: 14px !important;
     padding: 15px;
+  }
+
+  .object-card .property-details {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .object-card .property-features {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }
 
@@ -3340,6 +3463,11 @@ a {
     width: 100%;
   }
 
+  .main-carousel .img-fluid {
+    width: 100%;
+    height: initial;
+  }
+
   .main-carousel .slider-content--wrapper .slider-content__container {
     gap: 12px;
   }
@@ -3366,6 +3494,10 @@ a {
             flex: 1 1 100%;
   }
 
+  .property-description__title-plans {
+    margin-top: 30px;
+  }
+
   ._show-line .object-card .whatsapp-button,
   ._mobile-version .object-card .whatsapp-button {
     padding-left: 25px;
@@ -3382,6 +3514,10 @@ a {
   ._mobile-version .object-card .whatsapp-button {
     width: 171px;
     gap: 0;
+  }
+
+  .carousel-inner {
+    height: initial;
   }
 }
 
@@ -4016,6 +4152,30 @@ a {
     ._show-line .object-card,
     ._mobile-version .object-card {
       gap: calc(0.875rem + 1 * (100vw - 20rem) / 62);
+    }
+}
+
+@supports (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
+    .object-card .property-details__title {
+      font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
+    .object-card .property-details__title {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 62);
+    }
+}
+
+@supports (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
+    .object-card__title-features {
+      font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
+    .object-card__title-features {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 62);
     }
 }
 }
