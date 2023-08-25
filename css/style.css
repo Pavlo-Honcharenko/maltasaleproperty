@@ -1597,8 +1597,34 @@ a {
   margin: 0 auto;
 }
 
+.filter-sale-rent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu__location {
+  width: 100vw;
+  max-width: 550px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dropdown-menu__location .dropdown-menu-block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47%;
+          flex: 0 0 47%;
+}
+
 .filter-container {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .all-filters .show .filter-container {
@@ -1858,7 +1884,7 @@ a {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   background-color: #F5F5F5;
-  padding: 1px 4px;
+  padding: 1px 4px 1px 25px;
   color: #143A3A;
   font-size: 12px;
 }
@@ -2327,6 +2353,23 @@ a {
   margin: 0;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper::after {
+  content: "€";
+  position: absolute;
+  left: 40px;
+  /* Расположение символа внутри инпута */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  /* Это предотвращает взаимодействие с символом */
+}
+
 @media (min-width: 61.99875em) {
   .header .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end;
@@ -2557,6 +2600,17 @@ a {
   }
 }
 
+@media (max-width: 40em) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin-bottom: 22%;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    display: none;
+  }
+}
+
 @media (max-width: 25em) {
   ._show-line .object-card .contact-form-button,
   ._show-line .object-card .whatsapp-button,
@@ -2759,15 +2813,15 @@ a {
 
   .carousel-control-next,
   .carousel-control-prev {
-    margin-bottom: 2.8125rem;
+    margin-bottom: 1.5625rem;
   }
 
   .carousel-indicators [data-bs-target] {
-    width: 5.625rem;
+    width: 2.5rem;
   }
 
   .carousel-indicators [data-bs-target] {
-    height: 5.625rem;
+    height: 2.5rem;
   }
 
   .carousel-indicators img {
@@ -3038,6 +3092,20 @@ a {
 
   .contact-form__container .button {
     padding: 13px 30px 14px;
+  }
+
+  .dropdown-menu__location {
+    width: 100%;
+    max-width: initial;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .dropdown-menu__location .dropdown-menu-block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 
   .filter-item {
@@ -3799,41 +3867,41 @@ a {
     }
 }
 
-@supports (margin-bottom: clamp( 2.8125rem , 2.2076612903rem  +  3.0241935484vw , 4.6875rem )) {
+@supports (margin-bottom: clamp( 1.5625rem , 0.5544354839rem  +  5.0403225806vw , 4.6875rem )) {
     .carousel-control-next,
     .carousel-control-prev {
-      margin-bottom: clamp( 2.8125rem , 2.2076612903rem  +  3.0241935484vw , 4.6875rem );
+      margin-bottom: clamp( 1.5625rem , 0.5544354839rem  +  5.0403225806vw , 4.6875rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2.8125rem , 2.2076612903rem  +  3.0241935484vw , 4.6875rem )) {
+@supports not (margin-bottom: clamp( 1.5625rem , 0.5544354839rem  +  5.0403225806vw , 4.6875rem )) {
     .carousel-control-next,
     .carousel-control-prev {
-      margin-bottom: calc(2.8125rem + 1.875 * (100vw - 20rem) / 62);
+      margin-bottom: calc(1.5625rem + 3.125 * (100vw - 20rem) / 62);
     }
 }
 
-@supports (width: clamp( 5.625rem , 4.4153225806rem  +  6.0483870968vw , 9.375rem )) {
+@supports (width: clamp( 2.5rem , 0.2822580645rem  +  11.0887096774vw , 9.375rem )) {
     .carousel-indicators [data-bs-target] {
-      width: clamp( 5.625rem , 4.4153225806rem  +  6.0483870968vw , 9.375rem );
+      width: clamp( 2.5rem , 0.2822580645rem  +  11.0887096774vw , 9.375rem );
     }
 }
 
-@supports not (width: clamp( 5.625rem , 4.4153225806rem  +  6.0483870968vw , 9.375rem )) {
+@supports not (width: clamp( 2.5rem , 0.2822580645rem  +  11.0887096774vw , 9.375rem )) {
     .carousel-indicators [data-bs-target] {
-      width: calc(5.625rem + 3.75 * (100vw - 20rem) / 62);
+      width: calc(2.5rem + 6.875 * (100vw - 20rem) / 62);
     }
 }
 
-@supports (height: clamp( 5.625rem , 4.4153225806rem  +  6.0483870968vw , 9.375rem )) {
+@supports (height: clamp( 2.5rem , 0.2822580645rem  +  11.0887096774vw , 9.375rem )) {
     .carousel-indicators [data-bs-target] {
-      height: clamp( 5.625rem , 4.4153225806rem  +  6.0483870968vw , 9.375rem );
+      height: clamp( 2.5rem , 0.2822580645rem  +  11.0887096774vw , 9.375rem );
     }
 }
 
-@supports not (height: clamp( 5.625rem , 4.4153225806rem  +  6.0483870968vw , 9.375rem )) {
+@supports not (height: clamp( 2.5rem , 0.2822580645rem  +  11.0887096774vw , 9.375rem )) {
     .carousel-indicators [data-bs-target] {
-      height: calc(5.625rem + 3.75 * (100vw - 20rem) / 62);
+      height: calc(2.5rem + 6.875 * (100vw - 20rem) / 62);
     }
 }
 

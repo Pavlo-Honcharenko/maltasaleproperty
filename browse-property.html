@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230822215520" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css?_v=20230822215520">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230822215520">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230825093142" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css?_v=20230825093142">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230825093142">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -64,511 +64,254 @@
 
 						<div class="all-filters">
 							<div class="all-filters-container">
-								<!-- Tabs -->
-								<ul class="nav nav-tabs" id="filterTabs" role="tablist">
-									<li class="nav-item" role="presentation">
-										<a class="nav-link active" id="for-sale-tab" data-bs-toggle="tab" href="#forSale" role="tab">For Sale</a>
+								<ul class="nav filter-sale-rent">
+									<li><input type="checkbox" class="custom-checkbox sale-checkbox">
+										<span class="property-item">For Sale</span>
 									</li>
-									<li class="nav-item" role="presentation">
-										<a class="nav-link" id="for-rent-tab" data-bs-toggle="tab" href="#forRent" role="tab">For
-											Rent</a>
+									<li><input type="checkbox" class="custom-checkbox rent-checkbox">
+										<span class="property-item">For Rent</span>
 									</li>
 								</ul>
 
-								<!-- Tab Content -->
-								<div class="tab-content" id="filterTabsContent">
-									<!-- For Sale Content -->
-									<div class="tab-pane fade show active d-flex flex-wrap" id="forSale" role="tabpanel">
-										<!-- Весь ваш код фильтров для продажи здесь -->
+								<div class="filter-container d-flex flex-wrap">
 
-										<div class="filter-container d-flex flex-wrap">
-
-											<div class="filters">
-												<div class="filter-container">
-													<!-- Property Type Dropdown -->
-													<div class="dropdown filter-item filter-item__sale">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="propertyTypeDropdown" data-bs-toggle="dropdown">
-															Property Type
-														</button>
-														<div class="dropdown-menu">
-															<div class="dropdown-menu__header">
-																<a href="#" class="select-clear-links" id="selectAllPropertyType">Select
-																	All</a>
-																<a href="#" class="select-clear-links" id="clearAllPropertyType">Clear
-																	All</a>
-															</div>
-
-															<ul aria-labelledby="propertyTypeDropdown">
-
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Apartment</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Penthouse</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Townhouse</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Villa</span>
-																</li>
-																<!-- More property types here -->
-															</ul>
-														</div>
-
+									<div class="filters">
+										<div class="filter-container">
+											<!-- Property Type Dropdown -->
+											<div class="dropdown filter-item filter-item__sale">
+												<button class="btn custom-filter-button dropdown-toggle" type="button" id="propertyTypeDropdown" data-bs-toggle="dropdown">
+													Property Type
+												</button>
+												<div class="dropdown-menu">
+													<div class="dropdown-menu__header">
+														<a href="#" class="select-clear-links" id="selectAllPropertyType">Select
+															All</a>
+														<a href="#" class="select-clear-links" id="clearAllPropertyType">Clear
+															All</a>
 													</div>
 
+													<ul aria-labelledby="propertyTypeDropdown">
 
-													<!-- Location Dropdown -->
-													<div class="dropdown filter-item filter-item__rent">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
-															Location
-														</button>
+														<li><input type="checkbox" class="custom-checkbox property-checkbox">
+															<span class="property-item">Apartment</span>
+														</li>
+														<li><input type="checkbox" class="custom-checkbox property-checkbox">
+															<span class="property-item">Penthouse</span>
+														</li>
+														<li><input type="checkbox" class="custom-checkbox property-checkbox">
+															<span class="property-item">Townhouse</span>
+														</li>
+														<li><input type="checkbox" class="custom-checkbox property-checkbox">
+															<span class="property-item">Villa</span>
+														</li>
+														<!-- More property types here -->
+													</ul>
+												</div>
 
-														<div class="dropdown-menu">
-															<!-- SDA Block -->
-															<div class="dropdown-menu-block">
-																<div class="dropdown-menu__title">SDA</div>
-																<div class="dropdown-menu__header">
-																	<a href="#" class="select-clear-links" id="selectAllSDA">Select
-																		All</a>
-																	<a href="#" class="select-clear-links" id="clearAllSDA">Clear All</a>
-																</div>
-																<ul aria-labelledby="locationDropdown">
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">Fort Cambridge, Sliema</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">The Quad Business Towers,
-																			Mriehel</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">Portomaso, St Julians</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">Kempinski Residences, Gozo</span>
-																	</li>
-																	<!-- More SDA locations here -->
-																</ul>
-															</div>
+											</div>
 
-															<!-- Malta Block -->
-															<div class="dropdown-menu-block">
-																<div class="dropdown-menu__title">Malta</div>
-																<div class="dropdown-menu__header">
-																	<a href="#" class="select-clear-links" id="selectAllMalta">Select
-																		All</a>
-																	<a href="#" class="select-clear-links" id="clearAllMalta">Clear
-																		All</a>
-																</div>
-																<ul aria-labelledby="locationDropdown">
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Attard</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Bahar Ic-Caghaq</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Balzan</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Balzan</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Birkirkara</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Birzebbuga</span>
-																	</li>
-																	<!-- More Malta locations here -->
-																</ul>
-															</div>
 
-															<!-- Gozo Block -->
-															<div class="dropdown-menu-block">
-																<div class="dropdown-menu__title">Gozo</div>
-																<div class="dropdown-menu__header">
-																	<a href="#" class="select-clear-links" id="selectAllGozo">Select
-																		All</a>
-																	<a href="#" class="select-clear-links" id="clearAllGozo">Clear
-																		All</a>
-																</div>
-																<ul aria-labelledby="locationDropdown">
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Ghajnsielem</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Gharb</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Ghasri</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Zebbug Gozo</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Kercem</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Mgar Gozo</span>
-																	</li>
-																	<!-- More Gozo locations here -->
-																</ul>
-															</div>
+											<!-- Location Dropdown -->
+											<div class="dropdown filter-item filter-item__rent">
+												<button class="btn custom-filter-button dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+													Location
+												</button>
+
+												<div class="dropdown-menu dropdown-menu__location">
+													<!-- SDA Block -->
+													<div class="dropdown-menu-block">
+														<div class="dropdown-menu__title">SDA</div>
+														<div class="dropdown-menu__header">
+															<a href="#" class="select-clear-links" id="selectAllSDA">Select
+																All</a>
+															<a href="#" class="select-clear-links" id="clearAllSDA">Clear All</a>
 														</div>
-
-													</div>
-
-
-													<!-- Beds Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="bedsDropdown" data-bs-toggle="dropdown">
-															Beds
-														</button>
-														<ul class="dropdown-menu" aria-labelledby="bedsDropdown">
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">1</span>
+														<ul aria-labelledby="locationDropdown">
+															<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																<span class="property-item">Fort Cambridge, Sliema</span>
 															</li>
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">2</span>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																<span class="property-item">The Quad Business Towers,
+																	Mriehel</span>
 															</li>
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">3</span>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																<span class="property-item">Portomaso, St Julians</span>
 															</li>
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">4+</span>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
+																<span class="property-item">Kempinski Residences, Gozo</span>
 															</li>
-															<!-- More bed options here -->
+															<!-- More SDA locations here -->
 														</ul>
 													</div>
 
-
-													<!-- Baths Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="bathsDropdown" data-bs-toggle="dropdown">
-															Baths
-														</button>
-														<ul class="dropdown-menu" aria-labelledby="bathsDropdown">
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">1</span>
+													<!-- Malta Block -->
+													<div class="dropdown-menu-block">
+														<div class="dropdown-menu__title">Malta</div>
+														<div class="dropdown-menu__header">
+															<a href="#" class="select-clear-links" id="selectAllMalta">Select
+																All</a>
+															<a href="#" class="select-clear-links" id="clearAllMalta">Clear
+																All</a>
+														</div>
+														<ul aria-labelledby="locationDropdown">
+															<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																<span class="property-item">Attard</span>
 															</li>
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">2</span>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																<span class="property-item">Bahar Ic-Caghaq</span>
 															</li>
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">3</span>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																<span class="property-item">Balzan</span>
 															</li>
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">4+</span>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																<span class="property-item">Balzan</span>
 															</li>
-															<!-- More bath options here -->
+															<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																<span class="property-item">Birkirkara</span>
+															</li>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
+																<span class="property-item">Birzebbuga</span>
+															</li>
+															<!-- More Malta locations here -->
 														</ul>
 													</div>
 
-
-													<!-- Price Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="priceDropdown" data-bs-toggle="dropdown">
-															Price
-														</button>
-														<div class="dropdown-menu dropdown-menu-block dropdown-menu-body p-3" aria-labelledby="priceDropdown">
-															<!-- добавлен класс dropdown-menu-body -->
-															<div class="input-wrapper">
-																<label for="fromPrice">From</label>
-																<input type="text" id="fromPrice" class="price-input">
-															</div>
-															<div class="input-wrapper">
-																<label for="toPrice">To</label>
-																<input type="text" id="toPrice" class="price-input">
-															</div>
-															<div id="priceSlider"></div>
+													<!-- Gozo Block -->
+													<div class="dropdown-menu-block">
+														<div class="dropdown-menu__title">Gozo</div>
+														<div class="dropdown-menu__header">
+															<a href="#" class="select-clear-links" id="selectAllGozo">Select
+																All</a>
+															<a href="#" class="select-clear-links" id="clearAllGozo">Clear
+																All</a>
 														</div>
+														<ul aria-labelledby="locationDropdown">
+															<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																<span class="property-item">Ghajnsielem</span>
+															</li>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																<span class="property-item">Gharb</span>
+															</li>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																<span class="property-item">Ghasri</span>
+															</li>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																<span class="property-item">Zebbug Gozo</span>
+															</li>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																<span class="property-item">Kercem</span>
+															</li>
+															<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
+																<span class="property-item">Mgar Gozo</span>
+															</li>
+															<!-- More Gozo locations here -->
+														</ul>
 													</div>
+												</div>
+
+											</div>
 
 
-													<!-- Features Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="featuresDropdown" data-bs-toggle="dropdown">
-															Features
-														</button>
-														<div class="dropdown-menu">
-															<div class="dropdown-menu__header">
-																<a href="#" class="select-clear-links" id="selectAllFeatures">Select
-																	All</a>
-																<a href="#" class="select-clear-links" id="clearAllFeatures">Clear
-																	All</a>
-															</div>
-															<ul aria-labelledby="featuresDropdown">
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Pool</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Garage</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Views</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Roof Garden</span>
-																</li>
-																<!-- More features here -->
-															</ul>
-														</div>
+											<!-- Beds Dropdown -->
+											<div class="dropdown filter-item">
+												<button class="btn custom-filter-button dropdown-toggle" type="button" id="bedsDropdown" data-bs-toggle="dropdown">
+													Beds
+												</button>
+												<ul class="dropdown-menu" aria-labelledby="bedsDropdown">
+													<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+														<span class="property-item">1</span>
+													</li>
+													<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+														<span class="property-item">2</span>
+													</li>
+													<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+														<span class="property-item">3</span>
+													</li>
+													<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
+														<span class="property-item">4+</span>
+													</li>
+													<!-- More bed options here -->
+												</ul>
+											</div>
 
+
+											<!-- Baths Dropdown -->
+											<div class="dropdown filter-item">
+												<button class="btn custom-filter-button dropdown-toggle" type="button" id="bathsDropdown" data-bs-toggle="dropdown">
+													Baths
+												</button>
+												<ul class="dropdown-menu" aria-labelledby="bathsDropdown">
+													<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+														<span class="property-item">1</span>
+													</li>
+													<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+														<span class="property-item">2</span>
+													</li>
+													<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+														<span class="property-item">3</span>
+													</li>
+													<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
+														<span class="property-item">4+</span>
+													</li>
+													<!-- More bath options here -->
+												</ul>
+											</div>
+
+
+											<!-- Price Dropdown -->
+											<div class="dropdown filter-item">
+												<button class="btn custom-filter-button dropdown-toggle" type="button" id="priceDropdown" data-bs-toggle="dropdown">
+													Price
+												</button>
+												<div class="dropdown-menu dropdown-menu-block dropdown-menu-body p-3" aria-labelledby="priceDropdown">
+													<!-- добавлен класс dropdown-menu-body -->
+													<div class="input-wrapper">
+														<label for="fromPrice">From</label>
+														<input type="text" id="fromPrice" class="price-input">
 													</div>
-
+													<div class="input-wrapper">
+														<label for="toPrice">To</label>
+														<input type="text" id="toPrice" class="price-input">
+													</div>
+													<div id="priceSlider"></div>
 												</div>
 											</div>
 
-										</div>
 
-									</div>
-
-									<!-- For Rent Content -->
-									<div class="tab-pane fade d-flex flex-wrap" id="forRent" role="tabpanel">
-										<!-- Весь код фильтров для аренды здесь -->
-										<div class="filter-container d-flex flex-wrap">
-
-											<div class="filters">
-												<div class="filter-container">
-													<!-- Property Type Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="propertyTypeDropdownRent" data-bs-toggle="dropdown">
-															Property Type
-														</button>
-														<div class="dropdown-menu">
-															<div class="dropdown-menu__header">
-																<a href="#" class="select-clear-links" id="selectAllRentPropertyType">Select
-																	All</a>
-																<a href="#" class="select-clear-links" id="clearAllRentPropertyType">Clear
-																	All</a>
-															</div>
-
-															<ul aria-labelledby="propertyTypeDropdownRent">
-
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Apartment</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Penthouse</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Townhouse</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox property-checkbox">
-																	<span class="property-item">Villa</span>
-																</li>
-																<!-- More property types here -->
-															</ul>
-														</div>
-
+											<!-- Features Dropdown -->
+											<div class="dropdown filter-item">
+												<button class="btn custom-filter-button dropdown-toggle" type="button" id="featuresDropdown" data-bs-toggle="dropdown">
+													Features
+												</button>
+												<div class="dropdown-menu">
+													<div class="dropdown-menu__header">
+														<a href="#" class="select-clear-links" id="selectAllFeatures">Select
+															All</a>
+														<a href="#" class="select-clear-links" id="clearAllFeatures">Clear
+															All</a>
 													</div>
-
-
-													<!-- Location Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="locationDropdownRent" data-bs-toggle="dropdown">
-															Location
-														</button>
-
-														<div class="dropdown-menu">
-															<!-- SDA Block -->
-															<div class="dropdown-menu-block">
-																<div class="dropdown-menu__title">SDA</div>
-																<div class="dropdown-menu__header">
-																	<a href="#" class="select-clear-links" id="selectAllRentSDA">Select
-																		All</a>
-																	<a href="#" class="select-clear-links" id="clearAllRentSDA">Clear
-																		All</a>
-																</div>
-																<ul aria-labelledby="locationDropdownRent">
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">Fort Cambridge, Sliema</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">The Quad Business Towers,
-																			Mriehel</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">Portomaso, St Julians</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox sda-checkbox">
-																		<span class="property-item">Kempinski Residences, Gozo</span>
-																	</li>
-																	<!-- More SDA locations here -->
-																</ul>
-															</div>
-
-															<!-- Malta Block -->
-															<div class="dropdown-menu-block">
-																<div class="dropdown-menu__title">Malta</div>
-																<div class="dropdown-menu__header">
-																	<a href="#" class="select-clear-links" id="selectAllRentMalta">Select
-																		All</a>
-																	<a href="#" class="select-clear-links" id="clearAllRentMalta">Clear
-																		All</a>
-																</div>
-																<ul aria-labelledby="locationDropdownRent">
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Attard</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Bahar Ic-Caghaq</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Balzan</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Balzan</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Birkirkara</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox malta-checkbox">
-																		<span class="property-item">Birzebbuga</span>
-																	</li>
-																	<!-- More Malta locations here -->
-																</ul>
-															</div>
-
-															<!-- Gozo Block -->
-															<div class="dropdown-menu-block">
-																<div class="dropdown-menu__title">Gozo</div>
-																<div class="dropdown-menu__header">
-																	<a href="#" class="select-clear-links" id="selectAllRentGozo">Select
-																		All</a>
-																	<a href="#" class="select-clear-links" id="clearAllRentGozo">Clear
-																		All</a>
-																</div>
-																<ul aria-labelledby="locationDropdownRent">
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Ghajnsielem</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Gharb</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Ghasri</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Zebbug Gozo</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Kercem</span>
-																	</li>
-																	<li><input type="checkbox" class="custom-checkbox location-checkbox gozo-checkbox">
-																		<span class="property-item">Mgar Gozo</span>
-																	</li>
-																	<!-- More Gozo locations here -->
-																</ul>
-															</div>
-														</div>
-
-													</div>
-
-
-													<!-- Beds Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="bedsDropdownRent" data-bs-toggle="dropdown">
-															Beds
-														</button>
-														<ul class="dropdown-menu" aria-labelledby="bedsDropdownRent">
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">1</span>
-															</li>
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">2</span>
-															</li>
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">3</span>
-															</li>
-															<li><input type="radio" class="custom-checkbox beds-radio" name="beds">
-																<span class="property-item">4+</span>
-															</li>
-															<!-- More bed options here -->
-														</ul>
-													</div>
-
-
-													<!-- Baths Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="bathsDropdownRent" data-bs-toggle="dropdown">
-															Baths
-														</button>
-														<ul class="dropdown-menu" aria-labelledby="bathsDropdownRent">
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">1</span>
-															</li>
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">2</span>
-															</li>
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">3</span>
-															</li>
-															<li><input type="radio" class="custom-checkbox baths-radio" name="baths">
-																<span class="property-item">4+</span>
-															</li>
-															<!-- More bath options here -->
-														</ul>
-													</div>
-
-
-													<!-- Price Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="priceDropdownRent" data-bs-toggle="dropdown">
-															Price
-														</button>
-														<div class="dropdown-menu dropdown-menu-block dropdown-menu-body p-3" aria-labelledby="priceDropdownRent">
-															<!-- добавлен класс dropdown-menu-body -->
-															<div class="input-wrapper">
-																<label for="fromPriceRent">From</label>
-																<input type="text" id="fromPriceRent" class="price-input">
-															</div>
-															<div class="input-wrapper">
-																<label for="toPriceRent">To</label>
-																<input type="text" id="toPriceRent" class="price-input">
-															</div>
-															<div id="priceSliderRent"></div>
-														</div>
-													</div>
-
-
-													<!-- Features Dropdown -->
-													<div class="dropdown filter-item">
-														<button class="btn custom-filter-button dropdown-toggle" type="button" id="featuresDropdownRent" data-bs-toggle="dropdown">
-															Features
-														</button>
-														<div class="dropdown-menu">
-															<div class="dropdown-menu__header">
-																<a href="#" class="select-clear-links" id="selectAllRentFeatures">Select
-																	All</a>
-																<a href="#" class="select-clear-links" id="clearAllRentFeatures">Clear
-																	All</a>
-															</div>
-															<ul aria-labelledby="featuresDropdownRent">
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Pool</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Garage</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Views</span>
-																</li>
-																<li><input type="checkbox" class="custom-checkbox features-checkbox">
-																	<span class="property-item">Roof Garden</span>
-																</li>
-																<!-- More features here -->
-															</ul>
-														</div>
-
-													</div>
-
+													<ul aria-labelledby="featuresDropdown">
+														<li><input type="checkbox" class="custom-checkbox features-checkbox">
+															<span class="property-item">Pool</span>
+														</li>
+														<li><input type="checkbox" class="custom-checkbox features-checkbox">
+															<span class="property-item">Garage</span>
+														</li>
+														<li><input type="checkbox" class="custom-checkbox features-checkbox">
+															<span class="property-item">Views</span>
+														</li>
+														<li><input type="checkbox" class="custom-checkbox features-checkbox">
+															<span class="property-item">Roof Garden</span>
+														</li>
+														<!-- More features here -->
+													</ul>
 												</div>
+
 											</div>
 
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</div>
@@ -1046,9 +789,9 @@
 		</footer>
 	</div>
 	<!-- Bootstrap and jQuery scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230822215520" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js?_v=20230822215520"></script>
-	<script src="js/app.min.js?_v=20230822215520"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230825093142" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js?_v=20230825093142"></script>
+	<script src="js/app.min.js?_v=20230825093142"></script>
 </body>
 
 </html>
