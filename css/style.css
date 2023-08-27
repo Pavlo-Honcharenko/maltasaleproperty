@@ -460,7 +460,7 @@ footer a:hover {
 .main-carousel .img-fluid {
   min-height: 300px;
   width: 100%;
-  height: 47vw;
+  height: 53vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2045,9 +2045,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7px 23px 8px;
+  padding: 6px 23px 7px;
   border-radius: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #143A3A;
   font-size: 14px;
   font-weight: 700;
@@ -2057,7 +2057,7 @@ a {
   color: #5FAFEC;
   line-height: 1;
   font-weight: 500;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 
 .object-card__icons {
@@ -2241,6 +2241,7 @@ a {
   width: 100%;
   min-width: 100%;
   padding: 0;
+  margin-bottom: 0 !important;
 }
 
 ._show-line,
@@ -2370,7 +2371,7 @@ a {
 }
 
 .carousel-inner {
-  height: 47vw;
+  height: 53vw;
 }
 
 .member-buttons {
@@ -2427,13 +2428,6 @@ a {
   right: initial;
   bottom: initial;
   padding: 0 !important;
-}
-
-.property-info__container {
-  padding: 0;
-}
-
-.object-card {
   width: 100%;
   max-width: 100%;
   -webkit-box-orient: horizontal;
@@ -2454,57 +2448,122 @@ a {
   gap: 30px;
 }
 
-.object-card .property-details {
+.property-info__container .object-card .property-details {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 47%;
+          flex: 0 1 47%;
 }
 
-.object-card .property-details__title {
+.property-info__container .object-card .property-details__title {
   color: #143A3A;
   font-weight: 500;
   margin-bottom: 30px;
   line-height: 110%;
 }
 
-.object-card .property-features {
+.property-info__container .object-card .property-features {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 47%;
+          flex: 0 1 47%;
 }
 
-.object-card__lable {
+.property-info__container .object-card__lable {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 15px;
 }
 
-.object-card__title-features {
+.property-info__container .object-card__title-features {
   color: #143A3A;
   font-weight: 500;
   margin-bottom: 30px;
   line-height: 110%;
 }
 
-.object-card__icons {
+.property-info__container .object-card__icons {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.object-card__icon-item {
+.property-info__container .object-card__icon-item {
   padding-right: 20px;
 }
 
-.object-card__features {
+.property-info__container .object-card__features {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.object-card__property-id {
+.property-info__container .object-card__property-id {
   font-size: 14px;
+}
+
+.contact-buttons__container .object-card {
+  bottom: -10px;
+}
+
+.contact-buttons__container .object-card .object-card__icons {
+  margin-bottom: 24px;
+}
+
+.contact-buttons__container .object-card .object-card__title-features {
+  margin-right: auto;
+}
+
+.contact-buttons__container .object-card .object-card__features {
+  margin-bottom: 35px;
+}
+
+.contact-buttons__container .object-card .sqm {
+  font-size: 12px;
+}
+
+.contact-buttons__container .object-card .object-card__type,
+.contact-buttons__container .object-card .object-card__location,
+.contact-buttons__container .object-card .object-card__property-id {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-buttons__container .object-card .object-card__item-bottom {
+  margin-bottom: 16px;
+}
+
+.contact-buttons__container .object-card .contact-form-button,
+.contact-buttons__container .object-card .whatsapp-button {
+  width: 260px;
+  gap: 0;
+  margin-top: 7px;
+}
+
+.contact-buttons__container._show-line .object-card .object-card__icons,
+.contact-buttons__container._mobile-version .object-card .object-card__icons {
+  margin-bottom: 0;
+}
+
+.contact-buttons__container._show-line .object-card {
+  bottom: 0;
+}
+
+._show-line .object-card .contact-buttons__wrapper,
+._mobile-version .object-card .contact-buttons__wrapper {
+  gap: 10px;
+}
+
+.contact-buttons__container._show-line .object-card .contact-form-button,
+.contact-buttons__container._show-line .object-card .whatsapp-button,
+.contact-buttons__container._mobile-version .object-card .contact-form-button,
+.contact-buttons__container._mobile-version .object-card .whatsapp-button {
+  margin-top: 0;
+}
+
+.mini {
+  font-size: 12px !important;
 }
 
 @media (min-width: 61.99875em) {
@@ -2670,7 +2729,7 @@ a {
   }
 
   .object-card {
-    padding-top: 1.125rem;
+    padding-top: 1.25rem;
   }
 
   .object-card {
@@ -2690,7 +2749,7 @@ a {
   }
 
   .object-card__price {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .carousel-control-next,
@@ -2719,11 +2778,11 @@ a {
     gap: 1.875rem;
   }
 
-  .object-card .property-details__title {
+  .property-info__container .object-card .property-details__title {
     font-size: 2.5rem;
   }
 
-  .object-card__title-features {
+  .property-info__container .object-card__title-features {
     font-size: 2.5rem;
   }
 }
@@ -2748,7 +2807,17 @@ a {
 @media (max-width: 40em) {
   .carousel-control-next,
   .carousel-control-prev {
-    margin-bottom: 25%;
+    margin-bottom: 24.5% !important;
+  }
+
+  .main-carousel-home-page .carousel-control-next {
+    margin-bottom: 0 !important;
+    width: 30px !important;
+  }
+
+  .main-carousel-home-page .carousel-control-prev {
+    margin-bottom: 0 !important;
+    width: 50px !important;
   }
 
   .carousel-indicators [data-bs-target] {
@@ -2929,7 +2998,7 @@ a {
   }
 
   .object-card {
-    max-width: 17.5rem;
+    max-width: 18.75rem;
   }
 
   .object-card {
@@ -2982,11 +3051,11 @@ a {
     gap: 0.875rem;
   }
 
-  .object-card .property-details__title {
+  .property-info__container .object-card .property-details__title {
     font-size: 1.875rem;
   }
 
-  .object-card__title-features {
+  .property-info__container .object-card__title-features {
     font-size: 1.875rem;
   }
 }
@@ -3065,6 +3134,32 @@ a {
   .whatsapp-button {
     width: 200px;
     gap: 50px;
+  }
+}
+
+@media (max-width: 74.0625em) {
+  .contact-buttons__container .object-card .object-card__icons {
+    margin-bottom: 20px;
+  }
+
+  .contact-buttons__container .object-card .object-card__features {
+    margin-bottom: 22px;
+  }
+
+  .contact-buttons__container .object-card .object-card__features-item {
+    margin-bottom: 7px;
+  }
+
+  .contact-buttons__container .object-card .object-card__features-item span {
+    font-size: 14px;
+  }
+
+  .contact-buttons__container .object-card .object-card__title-features {
+    margin-bottom: 10px;
+  }
+
+  .contact-buttons__container .object-card .object-card__item-bottom {
+    margin-bottom: 12px;
   }
 }
 
@@ -3348,16 +3443,21 @@ a {
     padding: 15px;
   }
 
-  .object-card .property-details {
+  .property-info__container .object-card .property-details {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
 
-  .object-card .property-features {
+  .property-info__container .object-card .property-features {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+
+  .btn.btn-primary.slider-button {
+    padding: 9px 16px;
+    font-size: 17px;
   }
 }
 
@@ -3518,6 +3618,23 @@ a {
 
   .carousel-inner {
     height: initial;
+  }
+
+  .property-info__container .object-card__features-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .plan {
+    padding: 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .object-card__icons {
+    gap: 12px;
   }
 }
 
@@ -3995,27 +4112,27 @@ a {
     }
 }
 
-@supports (max-width: clamp( 17.5rem , 16.4314516129rem  +  5.3427419355vw , 20.8125rem )) {
+@supports (max-width: clamp( 18.75rem , 18.0846774194rem  +  3.3266129032vw , 20.8125rem )) {
     .object-card {
-      max-width: clamp( 17.5rem , 16.4314516129rem  +  5.3427419355vw , 20.8125rem );
+      max-width: clamp( 18.75rem , 18.0846774194rem  +  3.3266129032vw , 20.8125rem );
     }
 }
 
-@supports not (max-width: clamp( 17.5rem , 16.4314516129rem  +  5.3427419355vw , 20.8125rem )) {
+@supports not (max-width: clamp( 18.75rem , 18.0846774194rem  +  3.3266129032vw , 20.8125rem )) {
     .object-card {
-      max-width: calc(17.5rem + 3.3125 * (100vw - 20rem) / 62);
+      max-width: calc(18.75rem + 2.0625 * (100vw - 20rem) / 62);
     }
 }
 
-@supports (padding-top: clamp( 0.625rem , 0.4637096774rem  +  0.8064516129vw , 1.125rem )) {
+@supports (padding-top: clamp( 0.625rem , 0.4233870968rem  +  1.0080645161vw , 1.25rem )) {
     .object-card {
-      padding-top: clamp( 0.625rem , 0.4637096774rem  +  0.8064516129vw , 1.125rem );
+      padding-top: clamp( 0.625rem , 0.4233870968rem  +  1.0080645161vw , 1.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 0.625rem , 0.4637096774rem  +  0.8064516129vw , 1.125rem )) {
+@supports not (padding-top: clamp( 0.625rem , 0.4233870968rem  +  1.0080645161vw , 1.25rem )) {
     .object-card {
-      padding-top: calc(0.625rem + 0.5 * (100vw - 20rem) / 62);
+      padding-top: calc(0.625rem + 0.625 * (100vw - 20rem) / 62);
     }
 }
 
@@ -4067,15 +4184,15 @@ a {
     }
 }
 
-@supports (font-size: clamp( 1.5rem , 1.2580645161rem  +  1.2096774194vw , 2.25rem )) {
+@supports (font-size: clamp( 1.5rem , 1.1774193548rem  +  1.6129032258vw , 2.5rem )) {
     .object-card__price {
-      font-size: clamp( 1.5rem , 1.2580645161rem  +  1.2096774194vw , 2.25rem );
+      font-size: clamp( 1.5rem , 1.1774193548rem  +  1.6129032258vw , 2.5rem );
     }
 }
 
-@supports not (font-size: clamp( 1.5rem , 1.2580645161rem  +  1.2096774194vw , 2.25rem )) {
+@supports not (font-size: clamp( 1.5rem , 1.1774193548rem  +  1.6129032258vw , 2.5rem )) {
     .object-card__price {
-      font-size: calc(1.5rem + 0.75 * (100vw - 20rem) / 62);
+      font-size: calc(1.5rem + 1 * (100vw - 20rem) / 62);
     }
 }
 
@@ -4156,25 +4273,25 @@ a {
 }
 
 @supports (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
-    .object-card .property-details__title {
+    .property-info__container .object-card .property-details__title {
       font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem );
     }
 }
 
 @supports not (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
-    .object-card .property-details__title {
+    .property-info__container .object-card .property-details__title {
       font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 62);
     }
 }
 
 @supports (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
-    .object-card__title-features {
+    .property-info__container .object-card__title-features {
       font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem );
     }
 }
 
 @supports not (font-size: clamp( 1.875rem , 1.6733870968rem  +  1.0080645161vw , 2.5rem )) {
-    .object-card__title-features {
+    .property-info__container .object-card__title-features {
       font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 62);
     }
 }
