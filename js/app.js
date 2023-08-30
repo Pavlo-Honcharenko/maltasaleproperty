@@ -189,5 +189,22 @@
     }
     window.addEventListener("load", toggleMobileVersionClass);
     window.addEventListener("resize", toggleMobileVersionClass);
+    document.addEventListener("DOMContentLoaded", (function() {
+        const toPlansLink = document.querySelector(".to-plans");
+        const propertyDescriptionTitlePlans = document.querySelector(".property-description__title-plans");
+        if (toPlansLink && propertyDescriptionTitlePlans) toPlansLink.addEventListener("click", (function(event) {
+            event.preventDefault();
+            propertyDescriptionTitlePlans.scrollIntoView({
+                behavior: "smooth"
+            });
+        }));
+    }));
+    var sliders = document.querySelectorAll(".carousel");
+    sliders.forEach((function(slider) {
+        var interval = 2e4;
+        if (slider && typeof bootstrap.Carousel === "function") new bootstrap.Carousel(slider, {
+            interval
+        });
+    }));
     window["FLS"] = false;
 })();

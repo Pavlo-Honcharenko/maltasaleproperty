@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230827134936" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css?_v=20230827134936">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230827134936">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?_v=20230830203526" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css?_v=20230830203526">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230830203526">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -150,11 +150,11 @@
 							</div>
 						</div>
 						<div class="object-card__bottom">
-							<div class="object-card__item-bottom">
+							<div data-bs-toggle="modal" data-bs-target="#lightboxGallery" class="object-card__item-bottom">
 								<img src="img/icons/icon-picture.svg" alt="icon">
 								<span>20 photos</span>
 							</div>
-							<div class="object-card__item-bottom">
+							<div class="object-card__item-bottom to-plans">
 								<img src="img/icons/icon-plans.svg" alt="icon">
 								<span>Floor plans</span>
 							</div>
@@ -426,91 +426,11 @@
 
 
 
-			<!-- Proprety Card -->
-			<!-- <div class="contact-buttons contact-buttons-bottom-0">
-				<div class="contact-buttons__container">
-
-					<div class="object-card">
-						<div class="object-card__lable">
-							For Sale
-						</div>
-						<div class="object-card__price">€2,000,000</div>
-						<div class="object-card__icons">
-							<div class="object-card__icon-item">
-								<img src="img/icons/icon-bed.svg" alt="icon">
-								<span>4</span>
-							</div>
-							<div class="object-card__icon-item">
-								<img src="img/icons/icon-bed.svg" alt="icon">
-								<span>3</span>
-							</div>
-							<div class="object-card__icon-item">
-								<img src="img/icons/icon-bed.svg" alt="icon">
-								<span>300sqm</span>
-							</div>
-						</div>
-						<div class="object-card__title-features">Features</div>
-						<div class="object-card__features">
-							<div class="object-card__features-item">
-								<img src="img/icons/icon-check.svg" alt="icon">
-								<span>Large Terrace</span>
-							</div>
-							<div class="object-card__features-item">
-								<img src="img/icons/icon-check.svg" alt="icon">
-								<span>Hot Tub</span>
-							</div>
-							<div class="object-card__features-item">
-								<img src="img/icons/icon-check.svg" alt="icon">
-								<span>Bar</span>
-							</div>
-							<div class="object-card__features-item">
-								<img src="img/icons/icon-check.svg" alt="icon">
-								<span>Views</span>
-							</div>
-							<div class="object-card__features-item">
-								<img src="img/icons/icon-check.svg" alt="icon">
-								<span>Garage</span>
-							</div>
-							<div class="object-card__features-item">
-								<img src="img/icons/icon-check.svg" alt="icon">
-								<span>BBQ Area</span>
-							</div>
-						</div>
-						<div class="object-card__text-center">
-							<div class="object-card__type">Penthouse</div>
-							<div class="object-card__location">
-								<img src="img/icons/icon-location.svg" alt="icon">
-								<span>Birzebbuga</span>
-							</div>
-							<div class="object-card__property-id">
-								Property ID: 0001
-							</div>
-						</div>
-						<div class="object-card__bottom">
-							<div class="object-card__item-bottom">
-								<img src="img/icons/icon-picture.svg" alt="icon">
-								<span>20 photos</span>
-							</div>
-							<div class="object-card__item-bottom">
-								<img src="img/icons/icon-plans.svg" alt="icon">
-								<span>Floor plans</span>
-							</div>
-						</div>
-						<div class="contact-buttons__wrapper">
-							<!-- Button to trigger the modal -->
-			<!-- <a href="#" class="contact-form-button" data-bs-toggle="modal"
-								data-bs-target="#contactFormModal">Contact Form</a>
-
-							<a href="https://wa.me/PHONE_NUMBER" class="whatsapp-button" target="_blank">WhatsApp</a>
-						</div>
-					</div>
-
-				</div>
-			</div> --> -->
-			<!-- End of Proprety Card -->
 
 
-			<!-- Modal -->
+
+
+			<!-- Modal Contact Form -->
 			<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -559,16 +479,16 @@
 											<div class="col-lg-6 col-12">
 												<div class="row row-textarea">
 													<div class="col-12">
-														<textarea name="" id="" cols="30" rows="10" placeholder="* Your message"></textarea>
+														<textarea name="message" cols="30" rows="10" placeholder="* Your message"></textarea>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="row checkbox-mobile">
+										<div class="row checkbox-mob">
 											<div class="col-12">
 												<div class="checkbox">
-													<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
-													<label for="c_1" class="checkbox__label"><span class="checkbox__text">I consent
+													<input id="c_2" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="c_2" class="checkbox__label"><span class="checkbox__text">I consent
 															to having this website store my submitted information so they can respond
 															to my inquiry.</span></label>
 												</div>
@@ -583,11 +503,49 @@
 
 									</form>
 								</div>
-								</в>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+
+
+
+
+			<!-- Modal LightBox Gallery -->
+			<div class="modal fade" id="lightboxGallery" tabindex="-1" aria-labelledby="lightboxGalleryLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="modal-title" id="lightboxGalleryLabel">4 Bedroom Penthouse with Large Terrace in Malta</div>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="img/property.jpg" class="d-block img-fluid" alt="Изображение 1">
+									</div>
+									<div class="carousel-item">
+										<img src="img/property.jpg" class="d-block img-fluid" alt="Изображение 2">
+									</div>
+									<!-- Добавьте больше элементов с изображениями -->
+								</div>
+								<a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
 
 
 		</main>
@@ -649,9 +607,9 @@
 		</footer>
 	</div>
 	<!-- Bootstrap and jQuery scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230827134936" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js?_v=20230827134936"></script>
-	<script src="js/app.min.js?_v=20230827134936"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js?_v=20230830203526" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js?_v=20230830203526"></script>
+	<script src="js/app.min.js?_v=20230830203526"></script>
 </body>
 
 </html>

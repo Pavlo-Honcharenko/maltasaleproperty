@@ -1166,9 +1166,18 @@ footer a:hover {
   /* Hide the default checkbox */
 }
 
+.contact-form__container .checkbox-mobile .checkbox {
+  pointer-events: none;
+}
+
+.contact-form__container .checkbox__label {
+  pointer-events: none;
+}
+
 .contact-form__container .checkbox__label::before {
   content: "";
   position: absolute;
+  display: block;
   left: 0;
   top: 0;
   width: 20px;
@@ -1187,6 +1196,7 @@ footer a:hover {
 .contact-form__container .checkbox__input:checked + .checkbox__label::after {
   content: "✔";
   position: absolute;
+  display: block;
   left: 3px;
   top: 0;
   font-size: 18px;
@@ -1214,7 +1224,7 @@ footer a:hover {
   display: flex;
 }
 
-.checkbox-mobile {
+.checkbox-mob {
   display: none;
 }
 
@@ -1413,6 +1423,9 @@ a {
 ._mobile-version .member-card__image {
   display: block;
   width: 80px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
   height: 80px;
   border-radius: 5px;
   overflow: hidden;
@@ -1667,6 +1680,7 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 -4px;
 }
 
 .all-filters .show .filter-container {
@@ -1683,7 +1697,8 @@ a {
 }
 
 .filter-item {
-  margin-right: 15px;
+  margin-left: 7px;
+  margin-right: 7px;
   margin-bottom: 15px;
 }
 
@@ -1826,6 +1841,7 @@ a {
 
 .filters #priceSlider {
   margin-top: 12px;
+  width: 240px;
 }
 
 .filters .noUi-connects,
@@ -2418,7 +2434,6 @@ a {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   pointer-events: none;
-  /* Это предотвращает взаимодействие с символом */
 }
 
 .property-info__container .object-card {
@@ -2566,11 +2581,96 @@ a {
   font-size: 12px !important;
 }
 
+#lightboxGallery {
+  background-color: rgba(0, 0, 0, 0.9215686275);
+}
+
+#lightboxGallery .carousel-control-prev,
+#lightboxGallery .carousel-control-next {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#lightboxGallery .carousel-control-next {
+  right: 0;
+}
+
+#lightboxGallery .carousel-item-next,
+#lightboxGallery .carousel-item-prev,
+#lightboxGallery .carousel-item.active {
+  height: 100%;
+}
+
+#lightboxGallery .carousel-inner,
+#lightboxGallery .carousel-inner.active {
+  background-color: rgba(0, 0, 0, 0.9215686275);
+  max-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#lightboxGallery .carousel-inner img {
+  margin: auto;
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-card__bottom div {
+  cursor: pointer;
+}
+
 @media (min-width: 61.99875em) {
   .header .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+
+@media (min-width: 118.75em) {
+  .carousel-control-next {
+    right: 34vw;
+  }
+}
+
+@media (min-width: 131.25em) {
+  .carousel-control-next {
+    right: 35vw;
+  }
+
+  .carousel-indicators {
+    margin-right: 40%;
+  }
+}
+
+@media (min-width: 137.5em) {
+  .carousel-control-next {
+    right: 36vw;
+  }
+
+  .carousel-indicators {
+    margin-right: 41%;
+  }
+}
+
+@media (min-width: 168.75em) {
+  .carousel-control-next {
+    right: 38vw;
+  }
+
+  .carousel-indicators {
+    margin-right: 42%;
   }
 }
 
@@ -2787,6 +2887,16 @@ a {
   }
 }
 
+@media (min-width: 150em) {
+  .carousel-control-next {
+    right: 37vw;
+  }
+
+  .carousel-indicators {
+    margin-right: 42%;
+  }
+}
+
 @media (max-width: 1300px) {
   .footer .row {
     -webkit-box-flex: 0;
@@ -2966,7 +3076,7 @@ a {
 
   ._show-line .member-card__name,
   ._mobile-version .member-card__name {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 
   .all-filters {
@@ -3130,9 +3240,12 @@ a {
     border-radius: 0;
   }
 
-  .contact-form-button,
-  .whatsapp-button {
+  .member-buttons .contact-form-button,
+  .member-buttons .whatsapp-button {
     width: 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 190px;
+            flex: 0 0 190px;
     gap: 50px;
   }
 }
@@ -3224,11 +3337,16 @@ a {
     display: none;
   }
 
-  .checkbox-mobile {
+  .checkbox-mob {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 30px;
+  }
+
+  ._show-line .contact-buttons__wrapper,
+  ._mobile-version .contact-buttons__wrapper {
+    gap: 14px;
   }
 
   .dropdown-menu__location {
@@ -3275,6 +3393,17 @@ a {
   ._show-line .member-card .whatsapp-button,
   ._mobile-version .member-card .whatsapp-button {
     padding-left: 25px;
+  }
+
+  .member-buttons .contact-form-button,
+  .member-buttons .whatsapp-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
+  }
+
+  .member-buttons .whatsapp-button {
+    padding-left: 30px;
   }
 
   .contact-buttons__container #top-section-buttons {
@@ -3388,12 +3517,58 @@ a {
 
   .filter-item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% - 20px);
-            flex: 0 0 calc(50% - 20px);
+        -ms-flex: 0 0 calc(50% - 14px);
+            flex: 0 0 calc(50% - 14px);
   }
 
   .filter-item .btn {
     width: 100%;
+  }
+
+  .filters #priceSlider {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .filters .noUi-connects,
+  .filters .noUi-base {
+    height: 9px;
+  }
+
+  .filters .noUi-connect {
+    height: 5px;
+  }
+
+  .filters .noUi-horizontal {
+    height: 5px;
+  }
+
+  .filters .noUi-horizontal .noUi-handle {
+    width: 15px;
+    height: 15px;
+    right: -3px;
+    top: -5px;
+  }
+
+  .dropdown-menu.show {
+    width: calc(100vw - 26px);
+  }
+
+  .dropdown-menu.dropdown-menu-block.show {
+    width: calc(100vw - 26px);
+  }
+
+  .input-wrapper label {
+    font-size: 12px;
+    width: 40px;
+    margin-bottom: 5px;
+  }
+
+  .input-wrapper input {
+    font-size: 14px;
+    height: 30px;
+    margin-bottom: 5px;
   }
 
   .property-description__title-plans {
@@ -3443,6 +3618,11 @@ a {
     padding: 15px;
   }
 
+  .input-wrapper::after {
+    left: 48px;
+    top: 44%;
+  }
+
   .property-info__container .object-card .property-details {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
@@ -3458,6 +3638,42 @@ a {
   .btn.btn-primary.slider-button {
     padding: 9px 16px;
     font-size: 17px;
+  }
+}
+
+@media (max-width: 43.75em) {
+  ._show-line .member-card__image,
+  ._mobile-version .member-card__image {
+    width: 60px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60px;
+            flex: 0 0 60px;
+    height: 60px;
+  }
+
+  .member-buttons .contact-form-button,
+  .member-buttons .whatsapp-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55px;
+            flex: 0 0 55px;
+    color: transparent;
+    font-size: 12px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .member-buttons .contact-form-button {
+    background-image: url(../img/icons/icon-mail.svg);
+    background-size: 35px;
+    background-position: center 53%;
+    background-repeat: no-repeat;
+  }
+
+  .member-buttons .whatsapp-button {
+    padding-left: 0;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -3653,6 +3869,21 @@ a {
   ._mobile-version .contact-buttons__wrapper.member-buttons .whatsapp-button {
     padding-left: 18px;
     background-size: 28px 28px;
+  }
+}
+
+@media (max-width: 23.4375em) {
+  ._show-line .member-card__image,
+  ._mobile-version .member-card__image {
+    width: 50px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+    height: 50px;
+  }
+
+  ._mobile-version .contact-buttons__wrapper.member-buttons {
+    gap: 5px;
   }
 }
 
@@ -4014,17 +4245,17 @@ a {
     }
 }
 
-@supports (font-size: clamp( 1.5rem , 1.2177419355rem  +  1.4112903226vw , 2.375rem )) {
+@supports (font-size: clamp( 1.125rem , 0.7217741935rem  +  2.0161290323vw , 2.375rem )) {
     ._show-line .member-card__name,
     ._mobile-version .member-card__name {
-      font-size: clamp( 1.5rem , 1.2177419355rem  +  1.4112903226vw , 2.375rem );
+      font-size: clamp( 1.125rem , 0.7217741935rem  +  2.0161290323vw , 2.375rem );
     }
 }
 
-@supports not (font-size: clamp( 1.5rem , 1.2177419355rem  +  1.4112903226vw , 2.375rem )) {
+@supports not (font-size: clamp( 1.125rem , 0.7217741935rem  +  2.0161290323vw , 2.375rem )) {
     ._show-line .member-card__name,
     ._mobile-version .member-card__name {
-      font-size: calc(1.5rem + 0.875 * (100vw - 20rem) / 62);
+      font-size: calc(1.125rem + 1.25 * (100vw - 20rem) / 62);
     }
 }
 
