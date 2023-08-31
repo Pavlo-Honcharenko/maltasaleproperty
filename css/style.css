@@ -2630,6 +2630,18 @@ a {
   cursor: pointer;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.read-more img {
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
 @media (min-width: 61.99875em) {
   .header .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end;
@@ -2671,6 +2683,14 @@ a {
 
   .carousel-indicators {
     margin-right: 42%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .objects {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 
