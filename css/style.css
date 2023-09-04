@@ -2095,6 +2095,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.object-card__icon-item img {
+  height: 32px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25px;
+          flex: 0 1 25px;
 }
 
 .object-card__icon-item span {
@@ -4552,5 +4562,18 @@ a {
   .plan:hover {
     -webkit-filter: drop-shadow(10px 32px 72px rgba(0, 0, 0, 0.09));
             filter: drop-shadow(10px 32px 72px rgba(0, 0, 0, 0.09));
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
